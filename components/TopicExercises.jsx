@@ -56,7 +56,7 @@ const TopicExercises = ({ topicId }) => {
         <div className="flex flex-col gap-8 items-center w-full">
           <h2 className="text-4xl font-semibold">{topic.title}</h2>
           <p className="text-3xl">{topic.description}</p>
-          <div className="text-sm sm:text-xl mt-6 font-extralight space-y-4">
+          <div className="text-base sm:text-xl mt-6 font-extralight space-y-4">
             {topic.exercises.map((e) => {
               const parts = e.sentence.split("___");
               return (
@@ -69,7 +69,7 @@ const TopicExercises = ({ topicId }) => {
                     <input
                       type="text"
                       onChange={(e) => handleChange(e.id, e.target.value)}
-                      className="border-b border-gray-400 focus:outline-none w-[80px] sm:w-[130px] mx-2"
+                      className="border-b border-gray-400 bg-transparent focus:outline-none w-[80px] sm:w-[130px] mx-2"
                     />
                     <span>{parts[1]}</span>
                     {/* <p>{e.sentence}</p> */}
