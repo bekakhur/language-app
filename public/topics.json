@@ -1,0 +1,539 @@
+{
+  "topics": [
+    {
+      "id": "1",
+      "title": "Conditionals",
+      "description": "Practice different types of conditionals.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "If I ___ (know) about the party, I would have gone.",
+          "answer": "had known"
+        },
+        {
+          "id": 2,
+          "sentence": "If she ___ (study) harder, she will pass the exam.",
+          "answer": "studies"
+        },
+        {
+          "id": 3,
+          "sentence": "I ___ (call) you if I had your number.",
+          "answer": "would call"
+        },
+        {
+          "id": 4,
+          "sentence": "If it ___ (rain), we will stay indoors.",
+          "answer": "rains"
+        },
+        {
+          "id": 5,
+          "sentence": "He ___ (not leave) if he had known the truth.",
+          "answer": "would not have left"
+        },
+        {
+          "id": 6,
+          "sentence": "If you ___ (see) her, tell her I said hello.",
+          "answer": "see"
+        },
+        {
+          "id": 7,
+          "sentence": "I wouldn’t have been late if I ___ (wake up) earlier.",
+          "answer": "had woken up"
+        },
+        {
+          "id": 8,
+          "sentence": "If you ___ (exercise) regularly, you would be healthier.",
+          "answer": "exercised"
+        },
+        {
+          "id": 9,
+          "sentence": "If they ___ (win) the lottery, they would have traveled the world.",
+          "answer": "had won"
+        },
+        {
+          "id": 10,
+          "sentence": "If you ___ (not hurry), you will miss the train.",
+          "answer": "don’t hurry"
+        },
+        {
+          "id": 11,
+          "sentence": "I would buy a new car if I ___ (have) more money.",
+          "answer": "had"
+        },
+        {
+          "id": 12,
+          "sentence": "If we ___ (leave) earlier, we wouldn’t have missed the flight.",
+          "answer": "had left"
+        },
+        {
+          "id": 13,
+          "sentence": "If I ___ (be) you, I wouldn’t do that.",
+          "answer": "were"
+        },
+        {
+          "id": 14,
+          "sentence": "If he ___ (speak) English fluently, he would get the job.",
+          "answer": "spoke"
+        },
+        {
+          "id": 15,
+          "sentence": "If you ___ (not eat) so much, you wouldn’t feel sick.",
+          "answer": "hadn't eaten"
+        },
+        {
+          "id": 16,
+          "sentence": "She will join us if she ___ (finish) her homework on time.",
+          "answer": "finishes"
+        },
+        {
+          "id": 17,
+          "sentence": "If the weather ___ (not be) so bad, we could go hiking.",
+          "answer": "weren’t"
+        },
+        {
+          "id": 18,
+          "sentence": "I wouldn’t have gone if I ___ (know) it was a bad idea.",
+          "answer": "had known"
+        },
+        {
+          "id": 19,
+          "sentence": "If they ___ (help) us, we could finish sooner.",
+          "answer": "helped"
+        },
+        {
+          "id": 20,
+          "sentence": "You wouldn’t be tired if you ___ (sleep) more.",
+          "answer": "slept"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Passive Voice",
+      "description": "Practice transforming active sentences into passive.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "The book ___ (write) by J.K. Rowling.",
+          "answer": "was written"
+        },
+        {
+          "id": 2,
+          "sentence": "The cake ___ (eat) before I arrived.",
+          "answer": "had been eaten"
+        },
+        {
+          "id": 3,
+          "sentence": "The project ___ (finish) next week.",
+          "answer": "will be finished"
+        },
+        {
+          "id": 4,
+          "sentence": "The house ___ (build) in 1990.",
+          "answer": "was built"
+        },
+        {
+          "id": 5,
+          "sentence": "The report ___ (prepare) by the assistant.",
+          "answer": "was prepared"
+        },
+        {
+          "id": 6,
+          "sentence": "The email ___ (send) already.",
+          "answer": "has been sent"
+        },
+        {
+          "id": 7,
+          "sentence": "The window ___ (break) by a stone.",
+          "answer": "was broken"
+        },
+        {
+          "id": 8,
+          "sentence": "The meeting ___ (schedule) for 10 AM.",
+          "answer": "is scheduled"
+        },
+        {
+          "id": 9,
+          "sentence": "The flowers ___ (water) every morning.",
+          "answer": "are watered"
+        },
+        {
+          "id": 10,
+          "sentence": "The letter ___ (not receive) yet.",
+          "answer": "has not been received"
+        },
+        {
+          "id": 11,
+          "sentence": "The car ___ (repair) by the mechanic.",
+          "answer": "was repaired"
+        },
+        {
+          "id": 12,
+          "sentence": "The room ___ (clean) before guests arrive.",
+          "answer": "will be cleaned"
+        },
+        {
+          "id": 13,
+          "sentence": "The decision ___ (make) yesterday.",
+          "answer": "was made"
+        },
+        {
+          "id": 14,
+          "sentence": "The problem ___ (solve) soon.",
+          "answer": "will be solved"
+        },
+        {
+          "id": 15,
+          "sentence": "The experiment ___ (conduct) by the team.",
+          "answer": "was conducted"
+        },
+        {
+          "id": 16,
+          "sentence": "The invitation ___ (send) tomorrow.",
+          "answer": "will be sent"
+        },
+        {
+          "id": 17,
+          "sentence": "The painting ___ (sell) at auction.",
+          "answer": "was sold"
+        },
+        {
+          "id": 18,
+          "sentence": "The building ___ (construct) in two years.",
+          "answer": "will be constructed"
+        },
+        {
+          "id": 19,
+          "sentence": "The task ___ (complete) before the deadline.",
+          "answer": "was completed"
+        },
+        {
+          "id": 20,
+          "sentence": "The error ___ (correct) immediately.",
+          "answer": "was corrected"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Reported Speech",
+      "description": "Practice converting direct speech into reported speech.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "She said, 'I ___ (be) happy.'",
+          "answer": "was"
+        },
+        {
+          "id": 2,
+          "sentence": "He told me he ___ (not like) it.",
+          "answer": "didn't like"
+        },
+        {
+          "id": 3,
+          "sentence": "She asked if I ___ (want) to join.",
+          "answer": "wanted"
+        },
+        {
+          "id": 4,
+          "sentence": "He said, 'I ___ (work) tomorrow.'",
+          "answer": "would work"
+        },
+        {
+          "id": 5,
+          "sentence": "She said she ___ (finish) her homework.",
+          "answer": "had finished"
+        },
+        {
+          "id": 6,
+          "sentence": "He asked me where I ___ (live).",
+          "answer": "lived"
+        },
+        {
+          "id": 7,
+          "sentence": "She said, 'I ___ (not go) there yesterday.'",
+          "answer": "had not gone"
+        },
+        {
+          "id": 8,
+          "sentence": "He told me he ___ (call) later.",
+          "answer": "would call"
+        },
+        {
+          "id": 9,
+          "sentence": "She asked what time I ___ (arrive).",
+          "answer": "had arrived"
+        },
+        {
+          "id": 10,
+          "sentence": "He said, 'I ___ (can) help you.'",
+          "answer": "could"
+        },
+        {
+          "id": 11,
+          "sentence": "She asked if I ___ (be) okay.",
+          "answer": "was"
+        },
+        {
+          "id": 12,
+          "sentence": "He said he ___ (not meet) them before.",
+          "answer": "had not met"
+        },
+        {
+          "id": 13,
+          "sentence": "She told me she ___ (write) a book.",
+          "answer": "had written"
+        },
+        {
+          "id": 14,
+          "sentence": "He said, 'We ___ (go) to the park.'",
+          "answer": "went"
+        },
+        {
+          "id": 15,
+          "sentence": "She said she ___ (be) tired.",
+          "answer": "was"
+        },
+        {
+          "id": 16,
+          "sentence": "He asked me why I ___ (leave).",
+          "answer": "had left"
+        },
+        {
+          "id": 17,
+          "sentence": "She said she ___ (have) an idea.",
+          "answer": "had"
+        },
+        {
+          "id": 18,
+          "sentence": "He said, 'I ___ (not see) her recently.'",
+          "answer": "had not seen"
+        },
+        {
+          "id": 19,
+          "sentence": "She asked me if I ___ (know) him.",
+          "answer": "knew"
+        },
+        {
+          "id": 20,
+          "sentence": "He said he ___ (not want) to go.",
+          "answer": "didn't want"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Gerunds and Infinitives",
+      "description": "Practice using gerunds and infinitives in sentences.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "I enjoy ___ (read) books in my free time.",
+          "answer": "reading"
+        },
+        {
+          "id": 2,
+          "sentence": "She decided ___ (apply) for the job.",
+          "answer": "to apply"
+        },
+        {
+          "id": 3,
+          "sentence": "He admitted ___ (make) a mistake.",
+          "answer": "making"
+        },
+        {
+          "id": 4,
+          "sentence": "They plan ___ (travel) to Europe next summer.",
+          "answer": "to travel"
+        },
+        {
+          "id": 5,
+          "sentence": "We discussed ___ (move) to a new city.",
+          "answer": "moving"
+        },
+        {
+          "id": 6,
+          "sentence": "She avoided ___ (talk) about the problem.",
+          "answer": "talking"
+        },
+        {
+          "id": 7,
+          "sentence": "He promised ___ (help) me with my project.",
+          "answer": "to help"
+        },
+        {
+          "id": 8,
+          "sentence": "They decided ___ (not take) the risk.",
+          "answer": "not to take"
+        },
+        {
+          "id": 9,
+          "sentence": "I’m looking forward to ___ (see) you soon.",
+          "answer": "seeing"
+        },
+        {
+          "id": 10,
+          "sentence": "We need ___ (find) a solution quickly.",
+          "answer": "to find"
+        },
+        {
+          "id": 11,
+          "sentence": "She enjoys ___ (paint) landscapes.",
+          "answer": "painting"
+        },
+        {
+          "id": 12,
+          "sentence": "He refuses ___ (accept) the offer.",
+          "answer": "to accept"
+        },
+        {
+          "id": 13,
+          "sentence": "I don’t mind ___ (work) late occasionally.",
+          "answer": "working"
+        },
+        {
+          "id": 14,
+          "sentence": "They suggested ___ (meet) at the café.",
+          "answer": "meeting"
+        },
+        {
+          "id": 15,
+          "sentence": "She pretended ___ (not see) him.",
+          "answer": "not to see"
+        },
+        {
+          "id": 16,
+          "sentence": "He kept ___ (ask) the same question.",
+          "answer": "asking"
+        },
+        {
+          "id": 17,
+          "sentence": "We can’t afford ___ (buy) a new car.",
+          "answer": "to buy"
+        },
+        {
+          "id": 18,
+          "sentence": "She mentioned ___ (see) him at the event.",
+          "answer": "seeing"
+        },
+        {
+          "id": 19,
+          "sentence": "He agreed ___ (join) us for dinner.",
+          "answer": "to join"
+        },
+        {
+          "id": 20,
+          "sentence": "I stopped ___ (eat) junk food for my health.",
+          "answer": "eating"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Modal Verbs",
+      "description": "Practice using modal verbs correctly in different contexts.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "You ___ (must) wear a helmet while cycling.",
+          "answer": "must"
+        },
+        {
+          "id": 2,
+          "sentence": "He ___ (can) play the guitar very well.",
+          "answer": "can"
+        },
+        {
+          "id": 3,
+          "sentence": "She ___ (should) apologize for her mistake.",
+          "answer": "should"
+        },
+        {
+          "id": 4,
+          "sentence": "They ___ (might) arrive late due to traffic.",
+          "answer": "might"
+        },
+        {
+          "id": 5,
+          "sentence": "You ___ (must not) touch that, it’s dangerous.",
+          "answer": "must not"
+        },
+        {
+          "id": 6,
+          "sentence": "I ___ (could) swim when I was six years old.",
+          "answer": "could"
+        },
+        {
+          "id": 7,
+          "sentence": "We ___ (ought to) respect our elders.",
+          "answer": "ought to"
+        },
+        {
+          "id": 8,
+          "sentence": "You ___ (may) leave early if you finish your work.",
+          "answer": "may"
+        },
+        {
+          "id": 9,
+          "sentence": "He ___ (can’t) be at home; his car is not there.",
+          "answer": "can’t"
+        },
+        {
+          "id": 10,
+          "sentence": "I ___ (should have) called her earlier.",
+          "answer": "should have"
+        },
+        {
+          "id": 11,
+          "sentence": "She ___ (might not) come to the meeting today.",
+          "answer": "might not"
+        },
+        {
+          "id": 12,
+          "sentence": "You ___ (must) finish this before you leave.",
+          "answer": "must"
+        },
+        {
+          "id": 13,
+          "sentence": "We ___ (can’t) go out now, it’s raining heavily.",
+          "answer": "can’t"
+        },
+        {
+          "id": 14,
+          "sentence": "He ___ (could have) missed the train if he was late.",
+          "answer": "could have"
+        },
+        {
+          "id": 15,
+          "sentence": "They ___ (may) need some help with their project.",
+          "answer": "may"
+        },
+        {
+          "id": 16,
+          "sentence": "You ___ (ought to) speak more politely.",
+          "answer": "ought to"
+        },
+        {
+          "id": 17,
+          "sentence": "I ___ (must) study hard to pass the exam.",
+          "answer": "must"
+        },
+        {
+          "id": 18,
+          "sentence": "He ___ (can’t) have forgotten our appointment.",
+          "answer": "can’t"
+        },
+        {
+          "id": 19,
+          "sentence": "You ___ (might) find this information useful.",
+          "answer": "might"
+        },
+        {
+          "id": 20,
+          "sentence": "We ___ (should) prepare for the worst-case scenario.",
+          "answer": "should"
+        }
+      ]
+    }
+  ]
+}

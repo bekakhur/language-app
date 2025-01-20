@@ -1,11 +1,48 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+// Import necessary libraries
+import React, { useEffect, useState } from "react";
+
+const TopicsList = () => {
+  // State to hold topics data
+  const [topics, setTopics] = useState([]);
+
+  // Fetch topics data from the public directory
+  useEffect(() => {
+    const fetchTopics = async () => {
+      try {
+        const response = await fetch("/topics.json");
+        const data = await response.json();
+        setTopics(data.topics);
+      } catch (error) {
+        console.error("Error fetching topics:", error);
+      }
+    };
+
+    fetchTopics();
+  }, []);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div>home</div>
-      </main>
+    <div className="container mx-auto p-6 min-h-screen">
+      <h1 className="text-3xl font-bold text-center mb-8">Grammar Topics</h1>
+      <ul className="space-y-5">
+        {topics.map((topic) => (
+          <li
+            key={topic.id}
+            className="p-4 border max-w-[600px] rounded-lg shadow-sm duration-300 hover:shadow-md transition-shadow"
+          >
+            <a
+              href={`/topic/${topic.id}`}
+              className="block text-gray-800 hover:text-green-600"
+            >
+              <h2 className="text-xl font-semibold mb-2">{topic.title}</h2>
+              <p className="text-gray-600">{topic.description}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
+
+export default TopicsList;
