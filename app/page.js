@@ -29,14 +29,14 @@ const TopicsList = () => {
         {topics.map((topic) => (
           <li
             key={topic.id}
-            className="p-4 border max-w-[600px] rounded-lg shadow-sm duration-300 hover:shadow-md transition-shadow"
+            className="p-4 border max-w-[600px] rounded-lg shadow-sm duration-300 sm:hover:shadow-md transition-shadow"
           >
             <a
               href={`/topic/${topic.id}`}
-              className="block text-gray-800 hover:text-green-600"
+              className="block active:text-green-500 sm:hover:text-green-600"
             >
               <h2 className="text-xl font-semibold mb-2">{topic.title}</h2>
-              <p className="text-gray-600">{topic.description}</p>
+              <p>{topic.description}</p>
             </a>
           </li>
         ))}
