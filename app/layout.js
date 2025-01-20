@@ -1,11 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import { Poppins } from "next/font/google";
+import { Lato } from "next/font/google";
 
-const oswald = Poppins({
+const oswald = Lato({
   subsets: ["latin"],
-  weight: ["300", "500", "600", "700"],
+  weight: ["300", "400", "700"],
 });
 
 export const metadata = {
