@@ -34,10 +34,44 @@ const TopicExercises = ({ topicId }) => {
     setOpenQuestionId((prevId) => (prevId === id ? null : id)); // Переключение
   };
 
-  const [inputs, setInputs] = useState({});
+  // const [userAnswers, setUserAnswers] = useState({});
 
-  const handleChange = (id, value) => {
-    setInputs((prev) => ({ ...prev, [id]: value }));
+  // const handleInputChange = (id, value) => {
+  //   setUserAnswers((prev) => ({
+  //     ...prev,
+  //     [id]: value,
+  //   }));
+  // };
+
+  // const checkAnswer = (id, correctAnswer) => {
+  //   const userAnswer = userAnswers[id] || "";
+  //   return (
+  //     userAnswer.toLowerCase().trim() === correctAnswer.toLowerCase().trim()
+  //   );
+  // };
+
+  const [userAnswers, setUserAnswers] = useState({});
+  const [showAnswers, setShowAnswers] = useState({});
+
+  const handleInputChange = (id, value) => {
+    setUserAnswers((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const handleShowAnswer = (id) => {
+    setShowAnswers((prev) => ({
+      ...prev,
+      [id]: !prev[id], // Переключение состояния показа ответа
+    }));
+  };
+
+  const checkAnswer = (id, correctAnswer) => {
+    const userAnswer = userAnswers[id] || "";
+    return (
+      userAnswer.toLowerCase().trim() === correctAnswer.toLowerCase().trim()
+    );
   };
 
   return (
@@ -52,7 +86,7 @@ const TopicExercises = ({ topicId }) => {
         <div className="flex flex-col gap-8 items-center w-full">
           <h2 className="sm:text-4xl text-2xl font-semibold">{topic.title}</h2>
           <p className="text-xl sm:text-3xl text-center">{topic.description}</p>
-          <div className="text-base sm:text-2xl mt-6 font-light space-y-4">
+          {/* <div className="text-base sm:text-2xl mt-6 font-light space-y-4">
             {topic.exercises.map((e) => {
               const parts = e.sentence.split("___");
               return (
@@ -62,26 +96,75 @@ const TopicExercises = ({ topicId }) => {
                 >
                   <div>
                     <span>{parts[0]}</span>
-                    <input
-                      type="text"
-                      onChange={(e) => handleChange(e.id, e.target.value)}
-                      className="border rounded-sm bg-inherit lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2"
-                    />
+                    <input className="border rounded-sm bg-inherit lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2" />
                     <span>{parts[1]}</span>
-                    {/* <p>{e.sentence}</p> */}
+
                     <div className="mt-2">
                       {openQuestionId === e.id ? <p>{e.answer}</p> : <p>🔒</p>}
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row gap-4">
-                    <button className="text-sm py-2 px-4 rounded-full w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all duration-100 active:opacity-85 shadow-lg">
+                    <button className="text-sm text-gray-900 py-2 px-4 rounded-full w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all duration-100 active:opacity-85 shadow-lg">
                       CHECK
                     </button>
                     <button
                       onClick={() => toggleAnswer(e.id)}
-                      className="text-sm py-2 px-4 rounded-full w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all duration-100 active:opacity-85 shadow-lg"
+                      className="text-sm text-gray-900 py-2 px-4 rounded-full w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all duration-100 active:opacity-85 shadow-lg"
                     >
                       SHOW
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div> */}
+          <div className="text-base sm:text-2xl mt-6 font-light space-y-4">
+            {topic.exercises.map((riddle) => {
+              const parts = riddle.sentence.split("___");
+              return (
+                <div
+                  key={riddle.id}
+                  className="flex justify-between gap-10 items-center pb-2 w-full"
+                >
+                  <div>
+                    {/* <p className="mb-2 text-lg font-medium">{riddle.sentence}</p> */}
+                    <div className="">
+                      <span>{parts[0]}</span>
+
+                      <input
+                        type="text"
+                        value={userAnswers[riddle.id] || ""}
+                        onChange={(e) =>
+                          handleInputChange(riddle.id, e.target.value)
+                        }
+                        className="border rounded-sm bg-inherit lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2"
+                      />
+                      <span className="sm:text-3xl text-2xl">
+                        {userAnswers[riddle.id] ? (
+                          checkAnswer(riddle.id, riddle.answer) ? (
+                            <span className="text-green-500">☑</span> // Плюс
+                          ) : (
+                            <span className="text-red-500">☒</span> // Минус
+                          )
+                        ) : (
+                          <span className="text-transparent">☒</span>
+                        )}
+                      </span>
+                      <span>{parts[1]}</span>
+                    </div>
+
+                    {showAnswers[riddle.id] ? (
+                      <p className="text-gray-700 mt-2">{riddle.answer}</p>
+                    ) : (
+                      <p className="mt-2">🔒</p>
+                    )}
+                  </div>
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <button
+                      onClick={() => handleShowAnswer(riddle.id)}
+                      className="text-sm text-gray-900 py-2 px-4 rounded-full w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all duration-100 active:opacity-85 shadow-lg"
+                    >
+                      {showAnswers[riddle.id] ? "HIDE" : "SHOW"}
                     </button>
                   </div>
                 </div>
@@ -90,6 +173,32 @@ const TopicExercises = ({ topicId }) => {
           </div>
         </div>
       )}
+      {/* {topic && (
+        <div className="w-full max-w-md p-4 bg-white rounded shadow">
+          {topic.exercises.map((riddle) => (
+            <div key={riddle.id} className="mb-4">
+              <p className="mb-2 text-lg font-medium">{riddle.sentence}</p>
+              <div className="flex items-center">
+                <input
+                  type="text"
+                  placeholder="Ваш ответ"
+                  value={userAnswers[riddle.id] || ""}
+                  onChange={(e) => handleInputChange(riddle.id, e.target.value)}
+                  className="w-full px-4 py-2 border rounded focus:outline-none"
+                />
+                <span className="ml-3 text-xl">
+                  {userAnswers[riddle.id] &&
+                    (checkAnswer(riddle.id, riddle.answer) ? (
+                      <span className="text-green-500">✔</span> // Плюс
+                    ) : (
+                      <span className="text-red-500">✘</span> // Минус
+                    ))}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )} */}
     </div>
   );
 };
