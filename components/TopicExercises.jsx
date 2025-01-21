@@ -137,19 +137,21 @@ const TopicExercises = ({ topicId }) => {
                         onChange={(e) =>
                           handleInputChange(riddle.id, e.target.value)
                         }
-                        className="border rounded-sm bg-inherit lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2"
+                        className={`${
+                          userAnswers[riddle.id] &&
+                          (checkAnswer(riddle.id, riddle.answer)
+                            ? "border-green-600" // Плюс
+                            : "border-red-500") // Минус
+                        } border rounded-sm bg-transparent px-1 lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2`}
                       />
-                      <span className="mr-1">
-                        {userAnswers[riddle.id] ? (
-                          checkAnswer(riddle.id, riddle.answer) ? (
-                            <span className="text-green-500">🟢</span> // Плюс
+                      {/* <span className="mr-1">
+                        {userAnswers[riddle.id] &&
+                          (checkAnswer(riddle.id, riddle.answer) ? (
+                            <span className="text-green-500">☑</span> // Плюс
                           ) : (
-                            <span className="text-red-500">🔴</span> // Минус
-                          )
-                        ) : (
-                          <span className="text-transparent">🔴</span>
-                        )}
-                      </span>
+                            <span className="text-red-500">☒</span> // Минус
+                          ))}
+                      </span> */}
                       <span>{parts[1]}</span>
                     </div>
 
