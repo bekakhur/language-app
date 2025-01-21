@@ -124,7 +124,7 @@ const TopicExercises = ({ topicId }) => {
               return (
                 <div
                   key={riddle.id}
-                  className="flex justify-between gap-10 items-start pb-2 w-full"
+                  className="flex justify-between gap-2 sm:gap-10 items-start pb-2 w-full"
                 >
                   <div>
                     {/* <p className="mb-2 text-lg font-medium">{riddle.sentence}</p> */}
@@ -142,9 +142,11 @@ const TopicExercises = ({ topicId }) => {
                           (checkAnswer(riddle.id, riddle.answer)
                             ? "border-green-600" // Плюс
                             : "border-red-500") // Минус
-                        } border rounded-sm bg-transparent px-1 lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2`}
+                        } border rounded-sm bg-transparent px-1 lowercase focus:outline-none w-[80px] mx-2`}
                       />
-                      {/* <span className="mr-1">
+                      <span>{parts[1]}</span>
+                    </div>
+                    {/* <span className="mr-1">
                         {userAnswers[riddle.id] &&
                           (checkAnswer(riddle.id, riddle.answer) ? (
                             <span className="text-green-500">☑</span> // Плюс
@@ -152,8 +154,32 @@ const TopicExercises = ({ topicId }) => {
                             <span className="text-red-500">☒</span> // Минус
                           ))}
                       </span> */}
-                      <span>{parts[1]}</span>
-                    </div>
+                    {/* <div className="flex mt-4 w-[90vw] items-center">
+                      <span className="truncate">{parts[0]}</span>
+
+                      <input
+                        type="text"
+                        value={userAnswers[riddle.id] || ""}
+                        onChange={(e) =>
+                          handleInputChange(riddle.id, e.target.value)
+                        }
+                        className={`border rounded-sm bg-transparent px-1 lowercase focus:outline-none w-[130px] min-w-[80px] mx-2 ${
+                          userAnswers[riddle.id]
+                            ? checkAnswer(riddle.id, riddle.answer)
+                              ? "border-green-600"
+                              : "border-red-500"
+                            : "border-gray-300"
+                        }`}
+                      />
+
+                      <span className="truncate">{parts[1]}</span>
+                    </div> 
+
+                    {showAnswers[riddle.id] ? (
+                      <p className="mt-2">{riddle.answer}</p>
+                    ) : (
+                      <p className="mt-2">🔒</p>
+                    )}*/}
 
                     {showAnswers[riddle.id] ? (
                       <p className="mt-2">{riddle.answer}</p>
@@ -164,7 +190,7 @@ const TopicExercises = ({ topicId }) => {
                   <div className="flex flex-col md:flex-row gap-4">
                     <button
                       onClick={() => handleShowAnswer(riddle.id)}
-                      className="text-sm top-0 text-gray-900 py-2 px-4 rounded-full w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all focus:outline-none active:outline-none duration-100 active:opacity-85 shadow-lg"
+                      className="text-sm top-0 text-gray-900 py-2 px-4 rounded-full w-20 sm:w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all focus:outline-none active:outline-none duration-100 active:opacity-85 shadow-lg"
                     >
                       {showAnswers[riddle.id] ? "HIDE" : "SHOW"}
                     </button>
