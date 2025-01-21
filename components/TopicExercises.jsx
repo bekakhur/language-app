@@ -126,10 +126,10 @@ const TopicExercises = ({ topicId }) => {
                   key={riddle.id}
                   className="flex justify-between gap-2 sm:gap-10 items-start pb-2 w-full"
                 >
-                  <div>
+                  <div className="relative">
                     {/* <p className="mb-2 text-lg font-medium">{riddle.sentence}</p> */}
-                    <div className="">
-                      <span>{parts[0]}</span>
+                    <div className="flex flex-wrap">
+                      <p className="">{parts[0]}</p>
 
                       <input
                         type="text"
@@ -142,9 +142,9 @@ const TopicExercises = ({ topicId }) => {
                           (checkAnswer(riddle.id, riddle.answer)
                             ? "border-green-600" // Плюс
                             : "border-red-500") // Минус
-                        } border rounded-sm bg-transparent px-1 lowercase focus:outline-none w-[80px] mx-2`}
+                        } border rounded-sm bg-transparent px-1 lowercase h-6 focus:outline-none w-[80px] mx-2`}
                       />
-                      <span>{parts[1]}</span>
+                      <p className="">{parts[1]}</p>
                     </div>
                     {/* <span className="mr-1">
                         {userAnswers[riddle.id] &&
