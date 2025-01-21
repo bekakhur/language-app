@@ -24,7 +24,9 @@ const TopicsList = () => {
 
   return (
     <div className="container mx-auto px-6 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-8">Grammar Topics</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold text-center mb-8">
+        Grammar Topics
+      </h1>
       <ul className="space-y-5">
         {topics.map((topic) => (
           <li

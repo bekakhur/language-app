@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 const TopicExercises = ({ topicId }) => {
   const [topics, setTopics] = useState([]);
   const [openQuestionId, setOpenQuestionId] = useState(null);
-
   // Функция переключения отображения ответа
 
   // Fetch topics data from the public directory
@@ -51,8 +50,8 @@ const TopicExercises = ({ topicId }) => {
       </div> */}
       {topic && (
         <div className="flex flex-col gap-8 items-center w-full">
-          <h2 className="text-4xl font-semibold">{topic.title}</h2>
-          <p className="text-3xl">{topic.description}</p>
+          <h2 className="sm:text-4xl text-2xl font-semibold">{topic.title}</h2>
+          <p className="text-xl sm:text-3xl text-center">{topic.description}</p>
           <div className="text-base sm:text-2xl mt-6 font-light space-y-4">
             {topic.exercises.map((e) => {
               const parts = e.sentence.split("___");
@@ -66,7 +65,7 @@ const TopicExercises = ({ topicId }) => {
                     <input
                       type="text"
                       onChange={(e) => handleChange(e.id, e.target.value)}
-                      className="border-b bg-transparent lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2"
+                      className="border rounded-sm bg-inherit lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2"
                     />
                     <span>{parts[1]}</span>
                     {/* <p>{e.sentence}</p> */}
