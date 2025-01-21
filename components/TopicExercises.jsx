@@ -142,7 +142,7 @@ const TopicExercises = ({ topicId }) => {
                           (checkAnswer(riddle.id, riddle.answer)
                             ? "border-green-600" // Плюс
                             : "border-red-500") // Минус
-                        } border rounded-sm bg-transparent px-1 lowercase h-6 focus:outline-none w-[80px] mx-2`}
+                        } border rounded-sm bg-transparent px-1 lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2`}
                       />
                       <p className="">{parts[1]}</p>
                     </div>

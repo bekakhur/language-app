@@ -435,103 +435,638 @@
       "exercises": [
         {
           "id": 1,
-          "sentence": "You ___ (must) wear a helmet while cycling.",
+          "sentence": "You ___ wear a helmet while cycling.",
           "answer": "must"
         },
         {
           "id": 2,
-          "sentence": "He ___ (can) play the guitar very well.",
+          "sentence": "He ___ play the guitar very well.",
           "answer": "can"
         },
         {
           "id": 3,
-          "sentence": "She ___ (should) apologize for her mistake.",
+          "sentence": "She ___ apologize for her mistake.",
           "answer": "should"
         },
         {
           "id": 4,
-          "sentence": "They ___ (might) arrive late due to traffic.",
+          "sentence": "They ___ arrive late due to traffic.",
           "answer": "might"
         },
         {
           "id": 5,
-          "sentence": "You ___ (must not) touch that, it’s dangerous.",
+          "sentence": "You ___ touch that, it’s dangerous.",
           "answer": "must not"
         },
         {
           "id": 6,
-          "sentence": "I ___ (could) swim when I was six years old.",
+          "sentence": "I ___ wim when I was six years old.",
           "answer": "could"
         },
         {
           "id": 7,
-          "sentence": "We ___ (ought to) respect our elders.",
+          "sentence": "We ___ respect our elders.",
           "answer": "ought to"
         },
         {
           "id": 8,
-          "sentence": "You ___ (may) leave early if you finish your work.",
+          "sentence": "You ___ leave early if you finish your work.",
           "answer": "may"
         },
         {
           "id": 9,
-          "sentence": "He ___ (can’t) be at home; his car is not there.",
+          "sentence": "He ___ be at home; his car is not there.",
           "answer": "can’t"
         },
         {
           "id": 10,
-          "sentence": "I ___ (should have) called her earlier.",
+          "sentence": "I ___ called her earlier.",
           "answer": "should have"
         },
         {
           "id": 11,
-          "sentence": "She ___ (might not) come to the meeting today.",
+          "sentence": "She ___ come to the meeting today.",
           "answer": "might not"
         },
         {
           "id": 12,
-          "sentence": "You ___ (must) finish this before you leave.",
+          "sentence": "You ___ finish this before you leave.",
           "answer": "must"
         },
         {
           "id": 13,
-          "sentence": "We ___ (can’t) go out now, it’s raining heavily.",
+          "sentence": "We ___ go out now, it’s raining heavily.",
           "answer": "can’t"
         },
         {
           "id": 14,
-          "sentence": "He ___ (could have) missed the train if he was late.",
+          "sentence": "He ___ missed the train if he was late.",
           "answer": "could have"
         },
         {
           "id": 15,
-          "sentence": "They ___ (may) need some help with their project.",
+          "sentence": "They ___ need some help with their project.",
           "answer": "may"
         },
         {
           "id": 16,
-          "sentence": "You ___ (ought to) speak more politely.",
+          "sentence": "You ___ speak more politely.",
           "answer": "ought to"
         },
         {
           "id": 17,
-          "sentence": "I ___ (must) study hard to pass the exam.",
+          "sentence": "I ___ study hard to pass the exam.",
           "answer": "must"
         },
         {
           "id": 18,
-          "sentence": "He ___ (can’t) have forgotten our appointment.",
+          "sentence": "He ___ have forgotten our appointment.",
           "answer": "can’t"
         },
         {
           "id": 19,
-          "sentence": "You ___ (might) find this information useful.",
+          "sentence": "You ___ find this information useful.",
           "answer": "might"
         },
         {
           "id": 20,
-          "sentence": "We ___ (should) prepare for the worst-case scenario.",
+          "sentence": "We ___ prepare for the worst-case scenario.",
           "answer": "should"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Relative Clauses",
+      "description": "Exercise on relative clauses to practice defining and non-defining clauses.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "The book ___ I borrowed was fantastic.",
+          "answer": "that"
+        },
+        {
+          "id": 2,
+          "sentence": "I met a woman ___ son is a famous actor.",
+          "answer": "whose"
+        },
+        {
+          "id": 3,
+          "sentence": "The hotel ___ we stayed in was very comfortable.",
+          "answer": "where"
+        },
+        {
+          "id": 4,
+          "sentence": "This is the restaurant ___ I had my first date.",
+          "answer": "where"
+        },
+        {
+          "id": 5,
+          "sentence": "She’s the person ___ helped me with the project.",
+          "answer": "who"
+        },
+        {
+          "id": 6,
+          "sentence": "The concert, ___ was held in the park, was a huge success.",
+          "answer": "which"
+        },
+        {
+          "id": 7,
+          "sentence": "The painting ___ you see over there is by a famous artist.",
+          "answer": "that"
+        },
+        {
+          "id": 8,
+          "sentence": "He’s the one ___ car was stolen last night.",
+          "answer": "whose"
+        },
+        {
+          "id": 9,
+          "sentence": "I don’t like the man ___ lives next door.",
+          "answer": "who"
+        },
+        {
+          "id": 10,
+          "sentence": "The team, ___ was very successful last year, is currently struggling.",
+          "answer": "which"
+        },
+        {
+          "id": 11,
+          "sentence": "The company ___ I work for is expanding rapidly.",
+          "answer": "that"
+        },
+        {
+          "id": 12,
+          "sentence": "Do you remember the day ___ we first met?",
+          "answer": "when"
+        },
+        {
+          "id": 13,
+          "sentence": "She’s the person ___ advice I always follow.",
+          "answer": "whose"
+        },
+        {
+          "id": 14,
+          "sentence": "The movie ___ we watched last night was really boring.",
+          "answer": "that"
+        },
+        {
+          "id": 15,
+          "sentence": "It was a place ___ we used to visit every summer.",
+          "answer": "where"
+        },
+        {
+          "id": 16,
+          "sentence": "The report, ___ was submitted yesterday, needs some revisions.",
+          "answer": "which"
+        },
+        {
+          "id": 17,
+          "sentence": "I know the man ___ you were talking to.",
+          "answer": "who"
+        },
+        {
+          "id": 18,
+          "sentence": "She gave me a gift, ___ I thought was very thoughtful.",
+          "answer": "which"
+        },
+        {
+          "id": 19,
+          "sentence": "The store ___ we bought the TV has great customer service.",
+          "answer": "where"
+        },
+        {
+          "id": 20,
+          "sentence": "He is the person ___ I can always rely on.",
+          "answer": "whom"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Phrasal Verbs in Context",
+      "description": "Exercise on phrasal verbs to practice their meanings and uses in sentences.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "I need to ___ this project by next week.",
+          "answer": "finish"
+        },
+        {
+          "id": 2,
+          "sentence": "She ___ the job offer because she wasn’t happy with the salary.",
+          "answer": "turned down"
+        },
+        {
+          "id": 3,
+          "sentence": "They ___ a new restaurant downtown.",
+          "answer": "opened up"
+        },
+        {
+          "id": 4,
+          "sentence": "I’ll ___ you after the meeting to discuss the details.",
+          "answer": "get in touch with"
+        },
+        {
+          "id": 5,
+          "sentence": "He’s always trying to ___ others to join his project.",
+          "answer": "convince"
+        },
+        {
+          "id": 6,
+          "sentence": "We ___ a lot of problems during the construction process.",
+          "answer": "came across"
+        },
+        {
+          "id": "7",
+          "sentence": "I can’t believe how quickly time ___ when you’re having fun.",
+          "answer": "passes by"
+        },
+        {
+          "id": 8,
+          "sentence": "The teacher asked me to ___ the assignment by Friday.",
+          "answer": "hand in"
+        },
+        {
+          "id": 9,
+          "sentence": "She ___ with a solution that impressed everyone in the meeting.",
+          "answer": "came up"
+        },
+        {
+          "id": 10,
+          "sentence": "They ___ the news about the merger last month.",
+          "answer": "spread"
+        },
+        {
+          "id": 11,
+          "sentence": "I didn’t expect her to ___ my invitation to the party.",
+          "answer": "turn down"
+        },
+        {
+          "id": 12,
+          "sentence": "They will ___ the new software next month.",
+          "answer": "roll out"
+        },
+        {
+          "id": 13,
+          "sentence": "She always ___ when things get tough.",
+          "answer": "gives up"
+        },
+        {
+          "id": 14,
+          "sentence": "The company is trying to ___ their services to more countries.",
+          "answer": "expand"
+        },
+        {
+          "id": 15,
+          "sentence": "He ___ with his old friend at the reunion.",
+          "answer": "caught up"
+        },
+        {
+          "id": 16,
+          "sentence": "We need to ___ the contract before starting the project.",
+          "answer": "go through"
+        },
+        {
+          "id": 17,
+          "sentence": "I couldn’t ___ the noise outside while trying to sleep.",
+          "answer": "put up with"
+        },
+        {
+          "id": 18,
+          "sentence": "They ___ all their efforts to finish the project on time.",
+          "answer": "put in"
+        },
+        {
+          "id": 19,
+          "sentence": "Can you ___ me on the status of the project?",
+          "answer": "update"
+        },
+        {
+          "id": 20,
+          "sentence": "I ___ the task, but I’ll finish it tomorrow.",
+          "answer": "put off"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Inversion",
+      "description": "Exercise on inversion to practice using inverted sentence structures for emphasis or formality.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "Rarely ___ I seen such a breathtaking view.",
+          "answer": "have"
+        },
+        {
+          "id": 2,
+          "sentence": "Not only ___ she talented, but she is also very hardworking.",
+          "answer": "is"
+        },
+        {
+          "id": 3,
+          "sentence": "Under no circumstances ___ you leave the premises without permission.",
+          "answer": "should"
+        },
+        {
+          "id": 4,
+          "sentence": "Little ___ they know about the surprise awaiting them.",
+          "answer": "did"
+        },
+        {
+          "id": 5,
+          "sentence": "Seldom ___ we encounter such a complex problem.",
+          "answer": "do"
+        },
+        {
+          "id": 6,
+          "sentence": "Hardly ___ I entered the room when the phone rang.",
+          "answer": "had"
+        },
+        {
+          "id": 7,
+          "sentence": "Only after the meeting ___ we realize the importance of the issue.",
+          "answer": "did"
+        },
+        {
+          "id": 8,
+          "sentence": "Never before ___ the team faced such a difficult challenge.",
+          "answer": "has"
+        },
+        {
+          "id": 9,
+          "sentence": "Scarcely ___ the bell stopped ringing when the students rushed out.",
+          "answer": "had"
+        },
+        {
+          "id": 10,
+          "sentence": "Not until the end of the movie ___ I understand its meaning.",
+          "answer": "did"
+        },
+        {
+          "id": 11,
+          "sentence": "So rarely ___ she complain about anything that it surprised us all.",
+          "answer": "does"
+        },
+        {
+          "id": 12,
+          "sentence": "On no account ___ this door be left unlocked.",
+          "answer": "should"
+        },
+        {
+          "id": 13,
+          "sentence": "No sooner ___ he started speaking than the audience began to clap.",
+          "answer": "had"
+        },
+        {
+          "id": 14,
+          "sentence": "Only by working together ___ we achieve our goals.",
+          "answer": "can"
+        },
+        {
+          "id": 15,
+          "sentence": "Nowhere else ___ you find such a variety of goods.",
+          "answer": "will"
+        },
+        {
+          "id": 16,
+          "sentence": "Hardly ever ___ they visit us anymore.",
+          "answer": "do"
+        },
+        {
+          "id": 17,
+          "sentence": "No sooner ___ I finished my homework than the power went out.",
+          "answer": "had"
+        },
+        {
+          "id": 18,
+          "sentence": "Only rarely ___ he show his emotions.",
+          "answer": "does"
+        },
+        {
+          "id": 19,
+          "sentence": "Not until the lights went out ___ we realize how dark it was.",
+          "answer": "did"
+        },
+        {
+          "id": 20,
+          "sentence": "In no way ___ the problem be ignored any longer.",
+          "answer": "can"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Collocations with 'Make' and 'Do'",
+      "description": "Exercise on common collocations with 'make' and 'do' to practice choosing the correct verb.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "Can you ___ me a favor and help with this task?",
+          "answer": "do"
+        },
+        {
+          "id": 2,
+          "sentence": "We need to ___ a decision by the end of the day.",
+          "answer": "make"
+        },
+        {
+          "id": 3,
+          "sentence": "She always ___ her homework on time.",
+          "answer": "does"
+        },
+        {
+          "id": 4,
+          "sentence": "Let’s ___ an effort to arrive on time tomorrow.",
+          "answer": "make"
+        },
+        {
+          "id": 5,
+          "sentence": "He promised to ___ his best in the competition.",
+          "answer": "do"
+        },
+        {
+          "id": 6,
+          "sentence": "You should ___ a list of all the things you need to buy.",
+          "answer": "make"
+        },
+        {
+          "id": 7,
+          "sentence": "She ___ a mistake while calculating the expenses.",
+          "answer": "made"
+        },
+        {
+          "id": 8,
+          "sentence": "It’s important to ___ a good impression during your interview.",
+          "answer": "make"
+        },
+        {
+          "id": 9,
+          "sentence": "Could you ___ the cleaning while I cook dinner?",
+          "answer": "do"
+        },
+        {
+          "id": 10,
+          "sentence": "He decided to ________ some research before starting the project.",
+          "answer": "do"
+        },
+        {
+          "id": 11,
+          "sentence": "She wants to ________ a complaint about the poor service.",
+          "answer": "make"
+        },
+        {
+          "id": 12,
+          "sentence": "I forgot to ___ the dishes after dinner last night.",
+          "answer": "do"
+        },
+        {
+          "id": 13,
+          "sentence": "He needs to ___ a phone call before leaving.",
+          "answer": "make"
+        },
+        {
+          "id": 14,
+          "sentence": "They ___ a lot of money from selling handmade crafts.",
+          "answer": "make"
+        },
+        {
+          "id": 15,
+          "sentence": "We should ___ plans for the weekend soon.",
+          "answer": "make"
+        },
+        {
+          "id": 16,
+          "sentence": "I didn’t have time to ___ my bed this morning.",
+          "answer": "make"
+        },
+        {
+          "id": 17,
+          "sentence": "She always ___ a point of helping others.",
+          "answer": "makes"
+        },
+        {
+          "id": 18,
+          "sentence": "He had to ___ an excuse for being late again.",
+          "answer": "make"
+        },
+        {
+          "id": 19,
+          "sentence": "You should ___ your hair before we leave.",
+          "answer": "do"
+        },
+        {
+          "id": 20,
+          "sentence": "We’re trying to ___ arrangements for the conference.",
+          "answer": "make"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Phrasal Verbs",
+      "description": "Practice forming sentences with commonly used phrasal verbs in English. Complete the sentences by filling in the blanks with the correct phrasal verb.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "He didn't understand the instructions, so he had to look them ___ again.",
+          "answer": "up"
+        },
+        {
+          "id": 2,
+          "sentence": "Can you turn ___ the volume? It's too loud in here.",
+          "answer": "down"
+        },
+        {
+          "id": 3,
+          "sentence": "We set ___ early in the morning to avoid traffic.",
+          "answer": "off"
+        },
+        {
+          "id": 4,
+          "sentence": "She came ___ a rare coin while cleaning the attic.",
+          "answer": "across"
+        },
+        {
+          "id": 5,
+          "sentence": "The meeting was called ___ due to the storm.",
+          "answer": "off"
+        },
+        {
+          "id": 6,
+          "sentence": "He ran ___ of money halfway through his trip.",
+          "answer": "out"
+        },
+        {
+          "id": 7,
+          "sentence": "I can't put ___ with this noise anymore!",
+          "answer": "up"
+        },
+        {
+          "id": 8,
+          "sentence": "Please fill ___ the form and submit it at the desk.",
+          "answer": "out"
+        },
+        {
+          "id": 9,
+          "sentence": "They brought ___ a new policy to improve work conditions.",
+          "answer": "in"
+        },
+        {
+          "id": 10,
+          "sentence": "The fire fighters managed to put ___ the fire in just an hour.",
+          "answer": "out"
+        },
+        {
+          "id": 11,
+          "sentence": "She took ___ yoga to reduce stress.",
+          "answer": "up"
+        },
+        {
+          "id": 12,
+          "sentence": "I need to catch ___ on the work I missed during my vacation.",
+          "answer": "up"
+        },
+        {
+          "id": 13,
+          "sentence": "He gave ___ smoking after 10 years.",
+          "answer": "up"
+        },
+        {
+          "id": 14,
+          "sentence": "The teacher pointed ___ several mistakes in his essay.",
+          "answer": "out"
+        },
+        {
+          "id": 15,
+          "sentence": "They broke ___ after five years of dating.",
+          "answer": "up"
+        },
+        {
+          "id": 16,
+          "sentence": "I can't figure ___ how to solve this problem.",
+          "answer": "out"
+        },
+        {
+          "id": 17,
+          "sentence": "We should get ___ the train at the next station.",
+          "answer": "off"
+        },
+        {
+          "id": 18,
+          "sentence": "She hung ___ the phone without saying goodbye.",
+          "answer": "up"
+        },
+        {
+          "id": 19,
+          "sentence": "I'll look ___ your proposal and get back to you.",
+          "answer": "over"
+        },
+        {
+          "id": 20,
+          "sentence": "He turned ___ a job offer because it didn't meet his expectations.",
+          "answer": "down"
         }
       ]
     }

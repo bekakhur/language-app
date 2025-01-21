@@ -27,22 +27,22 @@ const TopicsList = () => {
       <h1 className="text-2xl sm:text-3xl font-bold text-center mb-8">
         Grammar Topics
       </h1>
-      <ul className="space-y-5">
+      <div className="flex flex-wrap justify-center gap-4 items-center">
         {topics.map((topic) => (
-          <li
+          <div
             key={topic.id}
-            className="p-4 border max-w-[600px] rounded-lg shadow-sm duration-300 sm:hover:shadow-md transition-shadow"
+            className="p-4 border w-full max-w-[500px] rounded-lg shadow-sm duration-300 sm:hover:shadow-md transition-shadow"
           >
             <a
               href={`/topic/${topic.id}`}
-              className="block active:text-green-500 sm:hover:text-green-600"
+              className="active:text-green-500 sm:hover:text-green-600"
             >
               <h2 className="text-xl font-semibold mb-2">{topic.title}</h2>
-              <p>{topic.description}</p>
+              <p className="max-w-[470px] truncate">{topic.description}</p>
             </a>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
