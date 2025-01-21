@@ -124,7 +124,7 @@ const TopicExercises = ({ topicId }) => {
               return (
                 <div
                   key={riddle.id}
-                  className="flex justify-between gap-10 items-center pb-2 w-full"
+                  className="flex justify-between gap-10 items-start pb-2 w-full"
                 >
                   <div>
                     {/* <p className="mb-2 text-lg font-medium">{riddle.sentence}</p> */}
@@ -139,22 +139,22 @@ const TopicExercises = ({ topicId }) => {
                         }
                         className="border rounded-sm bg-inherit lowercase focus:outline-none w-[80px] sm:w-[130px] mx-2"
                       />
-                      <span className="sm:text-3xl text-2xl">
+                      <span className="mr-1">
                         {userAnswers[riddle.id] ? (
                           checkAnswer(riddle.id, riddle.answer) ? (
-                            <span className="text-green-500">☑</span> // Плюс
+                            <span className="text-green-500">🟢</span> // Плюс
                           ) : (
-                            <span className="text-red-500">☒</span> // Минус
+                            <span className="text-red-500">🔴</span> // Минус
                           )
                         ) : (
-                          <span className="text-transparent">☒</span>
+                          <span className="text-transparent">🔴</span>
                         )}
                       </span>
                       <span>{parts[1]}</span>
                     </div>
 
                     {showAnswers[riddle.id] ? (
-                      <p className="text-gray-700 mt-2">{riddle.answer}</p>
+                      <p className="mt-2">{riddle.answer}</p>
                     ) : (
                       <p className="mt-2">🔒</p>
                     )}
@@ -162,7 +162,7 @@ const TopicExercises = ({ topicId }) => {
                   <div className="flex flex-col md:flex-row gap-4">
                     <button
                       onClick={() => handleShowAnswer(riddle.id)}
-                      className="text-sm text-gray-900 py-2 px-4 rounded-full w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all duration-100 active:opacity-85 shadow-lg"
+                      className="text-sm top-0 text-gray-900 py-2 px-4 rounded-full w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all focus:outline-none active:outline-none duration-100 active:opacity-85 shadow-lg"
                     >
                       {showAnswers[riddle.id] ? "HIDE" : "SHOW"}
                     </button>
