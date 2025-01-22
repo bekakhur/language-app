@@ -207,7 +207,7 @@ const TopicExercises = ({ topicId }) => {
   }, [userAnswers]);
 
   return (
-    <div className="flex mt-10 flex-col transition-all duration-1000 items-center px-4 w-full">
+    <div className="flex mt-10 flex-col overflow-hidden overscroll-none min-h-screen transition-all duration-1000 items-center px-4 w-full">
       {topic ? (
         <div className="flex flex-col gap-8 items-center w-full">
           <h2 className="sm:text-4xl text-2xl font-semibold">{topic.title}</h2>
@@ -257,7 +257,7 @@ const TopicExercises = ({ topicId }) => {
               );
             })}
           </div>
-          <div className="w-full top-0 fixed">
+          <div className="w-full fixed left-0 top-0 z-50">
             <div className="w-full bg-gray-100 h-1 sm:h-2 rounded">
               <div
                 className="bg-green-500 transition-all duration-500 h-1 sm:h-2 rounded"
