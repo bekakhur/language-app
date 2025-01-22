@@ -158,19 +158,19 @@
 "use client";
 
 import Header from "@/components/Header";
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation"; // Импортируем useRouter
+import React, { useCallback, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const TopicsList = () => {
   const [topics, setTopics] = useState([]);
   const [progress, setProgress] = useState({});
-  const router = useRouter(); // Инициализация useRouter
+  const router = useRouter();
 
-  // Функция для получения данных о темах и прогрессе
-  const fetchData = () => {
+  // Стабильная функция для получения данных
+  const fetchData = useCallback(() => {
     const fetchTopics = async () => {
       try {
-        const response = await fetch("/topics.json", { cache: "no-store" }); // Запрашиваем данные без кэширования
+        const response = await fetch("/topics.json", { cache: "no-store" });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -190,27 +190,25 @@ const TopicsList = () => {
 
     fetchTopics();
     loadProgress();
-  };
+  }, []); // Пустой массив зависимостей делает функцию стабильной
 
-  // Перезагружаем данные при изменении маршрута или переходе назад
+  // Перезагрузка данных при монтировании
   useEffect(() => {
-    fetchData(); // Загружаем данные заново
-  }, [router.asPath]); // Обновляем при изменении маршрута
+    fetchData();
+  }, [fetchData]);
 
-  // Принудительное обновление данных при изменении маршрута
+  // Обработчик popstate для обновления данных при нажатии "назад"
   useEffect(() => {
     const handlePopState = () => {
-      // Перезагружаем страницу при нажатии кнопки "назад"
-      router.refresh();
+      fetchData();
     };
 
     window.addEventListener("popstate", handlePopState);
 
-    // Очистка слушателя событий при размонтировании компонента
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
-  }, [router]);
+  }, [fetchData]);
 
   // Сохранение прогресса в localStorage при изменении
   useEffect(() => {
