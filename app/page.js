@@ -201,7 +201,7 @@ const TopicsList = () => {
   useEffect(() => {
     const handlePopState = () => {
       // Перезагружаем страницу при нажатии кнопки "назад"
-      router.reload();
+      router.refresh();
     };
 
     window.addEventListener("popstate", handlePopState);

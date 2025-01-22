@@ -210,7 +210,7 @@ const TopicExercises = ({ topicId }) => {
     <div className="flex flex-col min-h-screen transition-all duration-1000 items-center w-full">
       {topic ? (
         <div className="flex flex-col gap-8 items-center w-full">
-          <div className="w-full sticky top-0">
+          <div className="w-full hidden sm:flex sticky top-0">
             <div className="w-full bg-gray-100 h-1 sm:h-2 rounded">
               <div
                 className="bg-green-500 transition-all duration-500 h-1 sm:h-2 rounded"
@@ -225,7 +225,9 @@ const TopicExercises = ({ topicId }) => {
               {progress[topicId] || 0}/{topic.exercises.length} COMPLETED
             </p> */}
           </div>
-          <h2 className="sm:text-4xl text-2xl font-semibold">{topic.title}</h2>
+          <h2 className="sm:text-4xl text-2xl mt-10 font-semibold">
+            {topic.title}
+          </h2>
           <p className="text-xl sm:text-3xl text-center">{topic.description}</p>
           <div className="text-base sm:text-2xl mt-6 px-4 font-light space-y-4">
             {topic.exercises.map((riddle) => {
@@ -289,7 +291,9 @@ const TopicExercises = ({ topicId }) => {
           </div>
         </div>
       ) : (
-        <p className="text-center opacity-70 text-xl">Loading exercises...</p>
+        <p className="text-center opacity-70 sm:mt-20 mt-10 text-xl">
+          Loading exercises...
+        </p>
       )}
     </div>
   );
