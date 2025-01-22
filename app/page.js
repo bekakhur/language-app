@@ -158,19 +158,23 @@
 "use client";
 
 import Header from "@/components/Header";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 
 const TopicsList = () => {
   const [topics, setTopics] = useState([]);
   const [progress, setProgress] = useState({});
+  const [key, setKey] = useState(0); // Динамический ключ для перерендера
   const router = useRouter();
 
-  // Стабильная функция для получения данных
+  // Функция для загрузки данных
   const fetchData = useCallback(() => {
     const fetchTopics = async () => {
       try {
-        const response = await fetch("/topics.json", { cache: "no-store" });
+        // Добавляем уникальный параметр timestamp, чтобы запрос не кэшировался
+        const response = await fetch(`/topics.json?timestamp=${Date.now()}`, {
+          cache: "no-store",
+        });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -190,17 +194,17 @@ const TopicsList = () => {
 
     fetchTopics();
     loadProgress();
-  }, []); // Пустой массив зависимостей делает функцию стабильной
+  }, []);
 
-  // Перезагрузка данных при монтировании
+  // Загружаем данные при первой загрузке компонента
   useEffect(() => {
     fetchData();
   }, [fetchData]);
 
-  // Обработчик popstate для обновления данных при нажатии "назад"
+  // Обновляем компонент при возврате назад
   useEffect(() => {
     const handlePopState = () => {
-      fetchData();
+      setKey((prevKey) => prevKey + 1); // Увеличиваем ключ, чтобы компонент перерисовался
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -208,9 +212,9 @@ const TopicsList = () => {
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
-  }, [fetchData]);
+  }, []);
 
-  // Сохранение прогресса в localStorage при изменении
+  // Сохраняем прогресс в localStorage при его изменении
   useEffect(() => {
     localStorage.setItem("exerciseProgress", JSON.stringify(progress));
   }, [progress]);
@@ -223,7 +227,7 @@ const TopicsList = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div key={key} className="min-h-screen">
       <Header />
       <h1 className="text-2xl sm:text-3xl font-bold text-center mb-8">
         Grammar Topics
