@@ -198,9 +198,19 @@ const TopicsList = () => {
 
     window.addEventListener("popstate", handlePopState);
 
-    // Очистка события при размонтировании
+    // Подписка на изменения в localStorage
+    const handleStorageChange = (event) => {
+      if (event.key === "exerciseProgress") {
+        loadProgress();
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    // Очистка событий при размонтировании
     return () => {
       window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("storage", handleStorageChange);
     };
   }, []);
 
