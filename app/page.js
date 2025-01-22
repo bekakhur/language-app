@@ -160,13 +160,15 @@
 
 import Header from "@/components/Header";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation"; // Импортируем useRouter
 
 const TopicsList = () => {
   const [topics, setTopics] = useState([]);
   const [progress, setProgress] = useState({});
+  const router = useRouter(); // Инициализация useRouter
 
-  // Получение данных о темах и прогрессе
-  useEffect(() => {
+  // Функция для получения данных о темах и прогрессе
+  const fetchData = () => {
     const fetchTopics = async () => {
       try {
         const response = await fetch("/topics.json", { cache: "no-store" });
@@ -189,7 +191,12 @@ const TopicsList = () => {
 
     fetchTopics();
     loadProgress();
-  }, []);
+  };
+
+  // Перезагружаем данные при изменении маршрута
+  useEffect(() => {
+    fetchData();
+  }, [router.asPath]); // Будем обновлять данные при изменении маршрута
 
   // Сохранение прогресса в localStorage при изменении
   useEffect(() => {
