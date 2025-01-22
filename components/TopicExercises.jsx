@@ -207,12 +207,27 @@ const TopicExercises = ({ topicId }) => {
   }, [userAnswers]);
 
   return (
-    <div className="flex mt-10 flex-col overflow-hidden overscroll-none min-h-screen transition-all duration-1000 items-center px-4 w-full">
+    <div className="flex flex-col min-h-screen transition-all duration-1000 items-center w-full">
       {topic ? (
         <div className="flex flex-col gap-8 items-center w-full">
+          <div className="w-full sticky top-0">
+            <div className="w-full bg-gray-100 h-1 sm:h-2 rounded">
+              <div
+                className="bg-green-500 transition-all duration-500 h-1 sm:h-2 rounded"
+                style={{
+                  width: `${
+                    ((progress[topicId] || 0) / topic.exercises.length) * 100
+                  }%`,
+                }}
+              ></div>
+            </div>
+            {/* <p className="text-sm mt-2 text-gray-600">
+              {progress[topicId] || 0}/{topic.exercises.length} COMPLETED
+            </p> */}
+          </div>
           <h2 className="sm:text-4xl text-2xl font-semibold">{topic.title}</h2>
           <p className="text-xl sm:text-3xl text-center">{topic.description}</p>
-          <div className="text-base sm:text-2xl mt-6 font-light space-y-4">
+          <div className="text-base sm:text-2xl mt-6 px-4 font-light space-y-4">
             {topic.exercises.map((riddle) => {
               const parts = riddle.sentence.split("___");
               return (
@@ -257,7 +272,7 @@ const TopicExercises = ({ topicId }) => {
               );
             })}
           </div>
-          <div className="w-full fixed hidden sm:flex top-0">
+          <div className="w-full sticky top-0">
             <div className="w-full bg-gray-100 h-1 sm:h-2 rounded">
               <div
                 className="bg-green-500 transition-all duration-500 h-1 sm:h-2 rounded"
