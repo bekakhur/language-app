@@ -163,7 +163,8 @@ import React, { useEffect, useState } from "react";
 
 const TopicsList = () => {
   const [topics, setTopics] = useState([]);
-  const [progress, setProgress] = useState({}); // Хранение прогресса
+  const [progress, setProgress] = useState({});
+  const [isPopState, setIsPopState] = useState(false); // Отслеживание возврата назад
 
   // Получение данных о темах и прогрессе
   useEffect(() => {
@@ -180,7 +181,6 @@ const TopicsList = () => {
       }
     };
 
-    // Загрузка прогресса из localStorage
     const loadProgress = () => {
       const savedProgress = localStorage.getItem("exerciseProgress");
       if (savedProgress) {
@@ -191,35 +191,35 @@ const TopicsList = () => {
     fetchTopics();
     loadProgress();
 
-    // Подписка на событие popstate для обработки кнопки "Назад" в браузере
+    // Обработчик события popstate
     const handlePopState = () => {
-      loadProgress();
+      setIsPopState((prev) => !prev); // Меняем значение для триггера рендера
     };
 
     window.addEventListener("popstate", handlePopState);
 
-    // Подписка на изменения в localStorage
-    const handleStorageChange = (event) => {
-      if (event.key === "exerciseProgress") {
-        loadProgress();
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
+
+  // Обновление прогресса при изменении isPopState
+  useEffect(() => {
+    const loadProgress = () => {
+      const savedProgress = localStorage.getItem("exerciseProgress");
+      if (savedProgress) {
+        setProgress(JSON.parse(savedProgress));
       }
     };
 
-    window.addEventListener("storage", handleStorageChange);
-
-    // Очистка событий при размонтировании
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-      window.removeEventListener("storage", handleStorageChange);
-    };
-  }, []);
+    loadProgress();
+  }, [isPopState]);
 
   // Сохранение прогресса в localStorage при изменении
   useEffect(() => {
     localStorage.setItem("exerciseProgress", JSON.stringify(progress));
   }, [progress]);
 
-  // Функция для обновления прогресса
   const updateProgress = (topicId, totalExercises) => {
     setProgress((prev) => ({
       ...prev,
@@ -236,10 +236,10 @@ const TopicsList = () => {
       <div className="flex flex-wrap justify-center gap-4 px-6 items-center">
         {topics.length > 0 ? (
           topics.map((topic) => {
-            const completed = progress[topic.id] || 0; // Количество завершенных упражнений
+            const completed = progress[topic.id] || 0;
             const percentage = Math.round(
               (completed / topic.exercises.length) * 100
-            ); // Процент прогресса
+            );
 
             return (
               <div

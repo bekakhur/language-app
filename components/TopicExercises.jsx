@@ -257,7 +257,7 @@ const TopicExercises = ({ topicId }) => {
               );
             })}
           </div>
-          <div className="w-full fixed left-0 bottom-0 z-50">
+          <div className="w-full fixed hidden sm:flex top-0">
             <div className="w-full bg-gray-100 h-1 sm:h-2 rounded">
               <div
                 className="bg-green-500 transition-all duration-500 h-1 sm:h-2 rounded"
