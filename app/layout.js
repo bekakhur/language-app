@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
       />
 
       <body className={`${oswald.className} antialiased mb-10`}>
+        <Header />
         {children}
       </body>
     </html>

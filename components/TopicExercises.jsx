@@ -143,7 +143,7 @@ const TopicExercises = ({ topicId }) => {
     const loadProgress = () => {
       const savedProgress = localStorage.getItem("exerciseProgress");
       if (savedProgress) {
-        setProgress(JSON.parse(savedProgress));
+        setProgress(JSON.parse(0));
       }
     };
 
@@ -210,7 +210,7 @@ const TopicExercises = ({ topicId }) => {
     <div className="flex flex-col min-h-screen transition-all duration-1000 items-center w-full">
       {topic ? (
         <div className="flex flex-col gap-8 items-center w-full">
-          <div className="w-full hidden sm:flex sticky top-0">
+          <div className="w-full hidden sm:flex z-50 sticky top-0">
             <div className="w-full bg-gray-100 h-1 sm:h-2 rounded">
               <div
                 className="bg-green-500 transition-all duration-500 h-1 sm:h-2 rounded"
@@ -274,10 +274,10 @@ const TopicExercises = ({ topicId }) => {
               );
             })}
           </div>
-          <div className="w-full sticky top-0">
+          {/* <div className="w-full z-50 top-0">
             <div className="w-full bg-gray-100 h-1 sm:h-2 rounded">
               <div
-                className="bg-green-500 transition-all duration-500 h-1 sm:h-2 rounded"
+                className="bg-green-500 z-50 transition-all duration-500 h-1 sm:h-2 rounded"
                 style={{
                   width: `${
                     ((progress[topicId] || 0) / topic.exercises.length) * 100
@@ -285,10 +285,10 @@ const TopicExercises = ({ topicId }) => {
                 }}
               ></div>
             </div>
-            {/* <p className="text-sm mt-2 text-gray-600">
+            <p className="text-sm mt-2 text-gray-600">
               {progress[topicId] || 0}/{topic.exercises.length} COMPLETED
-            </p> */}
-          </div>
+            </p>
+          </div> */}
         </div>
       ) : (
         <p className="text-center opacity-70 sm:mt-20 mt-10 text-xl">
