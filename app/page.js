@@ -164,13 +164,12 @@ import React, { useEffect, useState } from "react";
 const TopicsList = () => {
   const [topics, setTopics] = useState([]);
   const [progress, setProgress] = useState({});
-  const [isPopState, setIsPopState] = useState(false); // Отслеживание возврата назад
 
   // Получение данных о темах и прогрессе
   useEffect(() => {
     const fetchTopics = async () => {
       try {
-        const response = await fetch("/topics.json");
+        const response = await fetch("/topics.json", { cache: "no-store" });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -190,30 +189,7 @@ const TopicsList = () => {
 
     fetchTopics();
     loadProgress();
-
-    // Обработчик события popstate
-    const handlePopState = () => {
-      setIsPopState((prev) => !prev); // Меняем значение для триггера рендера
-    };
-
-    window.addEventListener("popstate", handlePopState);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
   }, []);
-
-  // Обновление прогресса при изменении isPopState
-  useEffect(() => {
-    const loadProgress = () => {
-      const savedProgress = localStorage.getItem("exerciseProgress");
-      if (savedProgress) {
-        setProgress(JSON.parse(savedProgress));
-      }
-    };
-
-    loadProgress();
-  }, [isPopState]);
 
   // Сохранение прогресса в localStorage при изменении
   useEffect(() => {
