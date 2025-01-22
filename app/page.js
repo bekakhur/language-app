@@ -171,7 +171,7 @@ const TopicsList = () => {
   const fetchData = () => {
     const fetchTopics = async () => {
       try {
-        const response = await fetch("/topics.json", { cache: "no-store" });
+        const response = await fetch("/topics.json", { cache: "no-store" }); // Запрашиваем данные без кэширования
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -197,6 +197,21 @@ const TopicsList = () => {
   useEffect(() => {
     fetchData(); // Загружаем данные заново
   }, [router.asPath]); // Обновляем при изменении маршрута
+
+  // Принудительное обновление данных при изменении маршрута
+  useEffect(() => {
+    const handlePopState = () => {
+      // Перезагружаем страницу при нажатии кнопки "назад"
+      router.reload();
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    // Очистка слушателя событий при размонтировании компонента
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [router]);
 
   // Сохранение прогресса в localStorage при изменении
   useEffect(() => {
