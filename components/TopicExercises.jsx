@@ -211,7 +211,7 @@ const TopicExercises = ({ topicId }) => {
       {topic ? (
         <div className="flex flex-col gap-8 items-center w-full">
           <div className="w-full hidden sm:flex z-50 sticky top-0">
-            <div className="w-full bg-gray-100 sm:h-2 rounded">
+            <div className="w-full bg-gray-50 sm:h-2 rounded">
               <div
                 className="bg-green-500 transition-all duration-500 sm:h-2 rounded"
                 style={{
@@ -225,10 +225,10 @@ const TopicExercises = ({ topicId }) => {
               {progress[topicId] || 0}/{topic.exercises.length} COMPLETED
             </p> */}
           </div>
-          <h2 className="sm:text-4xl text-2xl mt-10 sm:mt-0 mx-4 font-semibold">
+          <h2 className="sm:text-3xl text-2xl mt-10 sm:mt-0 mx-4 font-semibold">
             {topic.title}
           </h2>
-          <p className="text-xl sm:text-3xl mx-4 sm:mx-10 text-center">
+          <p className="text-xl font-light sm:text-3xl mx-4 sm:mx-10 text-center">
             {topic.description}
           </p>
           <div className="text-base sm:text-2xl mt-6 px-4 font-light space-y-4">
