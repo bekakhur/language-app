@@ -261,7 +261,7 @@ const TopicExercises = ({ topicId }) => {
                     {showAnswers[riddle.id] ? (
                       <p className="mt-2">{riddle.answer}</p>
                     ) : (
-                      <p className="mt-2 text-gray-400">••••</p>
+                      <p className="mt-2 text-gray-400">••••••</p>
                     )}
                   </div>
                   <div className="flex flex-col md:flex-row gap-4">

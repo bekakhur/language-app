@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       />
 
       <body
-        className={`${oswald.className} bg-white antialiased mb-10 text-gray-950`}
+        className={`${oswald.className} bg-white antialiased mb-10 text-black`}
       >
         <Header />
         {children}
