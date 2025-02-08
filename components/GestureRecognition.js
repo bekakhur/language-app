@@ -130,7 +130,7 @@ export default function GestureRecognition() {
       ringTip.y > ringBase.y &&
       pinkyTip.y > pinkyBase.y
     ) {
-      setGesture("👍 ВЕРИ НАЙС 👍");
+      setGesture("👍 КУУУЛ 👍");
       return;
     }
 
@@ -141,7 +141,7 @@ export default function GestureRecognition() {
       ringTip.y > ringBase.y &&
       pinkyTip.y > pinkyBase.y
     ) {
-      setGesture("🚨 СРЕДНИЙ ПАЛЕЦ 🚨");
+      setGesture("🚨средний палец штраф 5 гривен🚨");
       return;
     }
 
@@ -182,7 +182,7 @@ export default function GestureRecognition() {
 
       {gesture && (
         <p
-          className="text-lg sm:text-[2rem]"
+          className="text-lg sm:text-[2rem] text-center uppercase w-full"
           style={{
             position: "absolute",
             bottom: "20px",
@@ -191,7 +191,6 @@ export default function GestureRecognition() {
             color: "white",
             backgroundColor: "rgba(0, 0, 0, 0.5)",
             padding: "10px 20px",
-            borderRadius: "10px",
           }}
         >
           {gesture}
