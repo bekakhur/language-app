@@ -182,12 +182,12 @@ export default function GestureRecognition() {
 
       {gesture && (
         <p
+          className="text-xl sm:text-[2rem]"
           style={{
             position: "absolute",
             bottom: "20px",
             left: "50%",
             transform: "translateX(-50%)",
-            fontSize: "2rem",
             color: "white",
             backgroundColor: "rgba(0, 0, 0, 0.5)",
             padding: "10px 20px",
