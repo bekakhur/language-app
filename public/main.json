@@ -1,0 +1,54 @@
+{
+  "topics": [
+    {
+      "id": "1",
+      "title": "Conditionals",
+      "description": "Practice different types of conditionals."
+    },
+    {
+      "id": "2",
+      "title": "Passive Voice",
+      "description": "Practice transforming active sentences into passive."
+    },
+    {
+      "id": "3",
+      "title": "Reported Speech",
+      "description": "Practice converting direct speech into reported speech."
+    },
+    {
+      "id": "4",
+      "title": "Gerunds and Infinitives",
+      "description": "Practice using gerunds and infinitives in sentences."
+    },
+    {
+      "id": "5",
+      "title": "Modal Verbs",
+      "description": "Practice using modal verbs correctly in different contexts."
+    },
+    {
+      "id": "6",
+      "title": "Relative Clauses",
+      "description": "Exercise on relative clauses to practice defining and non-defining clauses."
+    },
+    {
+      "id": "7",
+      "title": "Phrasal Verbs in Context",
+      "description": "Exercise on phrasal verbs to practice their meanings and uses in sentences."
+    },
+    {
+      "id": "8",
+      "title": "Inversion",
+      "description": "Exercise on inversion to practice using inverted sentence structures for emphasis or formality."
+    },
+    {
+      "id": "9",
+      "title": "Collocations with 'Make' and 'Do'",
+      "description": "Exercise on common collocations with 'make' and 'do' to practice choosing the correct verb."
+    },
+    {
+      "id": "10",
+      "title": "Phrasal Verbs",
+      "description": "Practice forming sentences with commonly used phrasal verbs in English. Complete the sentences by filling in the blanks with the correct phrasal verb."
+    }
+  ]
+}

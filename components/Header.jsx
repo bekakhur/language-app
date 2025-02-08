@@ -7,7 +7,7 @@ const Header = () => {
       <Link href="/" className="font-bold text-base sm:text-xl">
         GRAMMATICUS
       </Link>
-      <div className="flex gap-4 sm:gap-8">
+      <Link href="/account" className="flex gap-4 sm:gap-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -20,7 +20,7 @@ const Header = () => {
             clipRule="evenodd"
           />
         </svg>
-      </div>
+      </Link>
     </div>
   );
 };
