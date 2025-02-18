@@ -67,7 +67,7 @@ export default function Home() {
   );
 
   return (
-    <div className="flex flex-col items-center sm:justify-center pt-24 sm:pt-0 min-h-screen bg-black text-white font-mono p-4">
+    <div className="flex flex-col items-center sm:justify-center pt-36 sm:pt-0 min-h-screen bg-black text-white font-mono p-4">
       {!gameStarted ? (
         <button
           onClick={startGame}
@@ -96,10 +96,10 @@ export default function Home() {
             <p className="text-lg text-gray-400 mb-4">Time left: {timeLeft}s</p>
             <input
               ref={inputRef}
-              type="text"
+              type="email"
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
-              className="bg-black border border-gray-500 p-2 rounded w-full text-center text-white text-xl focus:outline-none"
+              className="bg-black border border-gray-500 p-2 appearance-none rounded w-full text-center text-white text-xl focus:outline-none"
               placeholder="Your answer"
             />
           </div>
