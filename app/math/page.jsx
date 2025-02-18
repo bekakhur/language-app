@@ -61,6 +61,11 @@ export default function Home() {
     inputRef.current?.focus();
   };
 
+  console.log(
+    "Clerk Publishable Key:",
+    process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+  );
+
   return (
     <div className="flex flex-col items-center sm:justify-center pt-24 sm:pt-0 min-h-screen bg-black text-white font-mono p-4">
       {!gameStarted ? (
@@ -71,7 +76,7 @@ export default function Home() {
           Start Game
         </button>
       ) : gameOver ? (
-        <div className="bg-red-500/90 text-white p-8 rounded-lg shadow-lg text-center">
+        <div className="bg-red-600 text-white p-8 rounded-lg shadow-lg text-center">
           <h1 className="text-4xl font-bold mb-4">Game Over</h1>
           <p className="text-2xl">Score: {score}</p>
           <button
