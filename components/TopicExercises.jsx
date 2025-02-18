@@ -267,7 +267,7 @@ const TopicExercises = ({ topicId }) => {
                   <div className="flex flex-col md:flex-row gap-4">
                     <button
                       onClick={() => handleShowAnswer(riddle.id)}
-                      className="text-sm top-0 text-gray-900 py-2 px-4 rounded-full w-20 sm:w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-all focus:outline-none active:outline-none duration-100 active:opacity-85 shadow-lg"
+                      className="text-sm top-0 text-gray-900 py-2 px-4 rounded-full w-20 sm:w-28 bg-gradient-to-t from-green-500 to-green-300 sm:hover:opacity-85 transition-opacity focus:outline-none active:outline-none duration-100 active:opacity-85 shadow-lg"
                     >
                       {showAnswers[riddle.id] ? "HIDE" : "SHOW"}
                     </button>
