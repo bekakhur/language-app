@@ -71,7 +71,7 @@ export default function Home() {
           Start Game
         </button>
       ) : gameOver ? (
-        <div className="bg-red-600 text-white p-8 rounded-lg shadow-lg text-center">
+        <div className="bg-red-500/90 text-white p-8 rounded-lg shadow-lg text-center">
           <h1 className="text-4xl font-bold mb-4">Game Over</h1>
           <p className="text-2xl">Score: {score}</p>
           <button
