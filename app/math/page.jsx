@@ -14,6 +14,13 @@ export default function Home() {
 
   const themeColor = "bg-yellow-500";
 
+  const isLargeScreen = () => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth > 640;
+    }
+    return false;
+  };
+
   useEffect(() => {
     if (gameStarted) {
       setNum1(Math.floor(Math.random() * 90) + 10);
@@ -41,7 +48,11 @@ export default function Home() {
       setNum2(Math.floor(Math.random() * 90) + 10);
       setUserAnswer("");
       setTimeLeft(10);
-      inputRef.current?.focus();
+      if (isLargeScreen()) {
+        inputRef.current?.focus(); // Фокус только на больших экранах
+      } else {
+        inputRef.current?.blur(); // Убираем фокус на мобильных устройствах
+      }
     }
   }, [userAnswer, gameOver, num1, num2]);
 
@@ -51,7 +62,9 @@ export default function Home() {
     setScore(0);
     setUserAnswer("");
     setTimeLeft(10);
-    inputRef.current?.focus();
+    if (isLargeScreen()) {
+      inputRef.current?.focus(); // Фокус только на больших экранах
+    }
   };
 
   const resetGame = () => {
@@ -61,7 +74,9 @@ export default function Home() {
     setUserAnswer("");
     setTimeLeft(10);
     setGameOver(false);
-    inputRef.current?.focus();
+    if (isLargeScreen()) {
+      inputRef.current?.focus(); // Фокус только на больших экранах
+    }
   };
 
   const handleNumberClick = (number) => {
@@ -80,9 +95,13 @@ export default function Home() {
     <>
       <Head>
         <meta name="theme-color" content={themeColor} />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content={themeColor}
+        />
         <title>Grammaticus Math</title>
       </Head>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white font-mono p-4">
+      <div className="flex flex-col items-center sm:justify-center pt-16 sm:pt-4 min-h-screen bg-black text-white font-mono p-4">
         {!gameStarted ? (
           <button
             onClick={startGame}
