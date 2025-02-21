@@ -144,26 +144,26 @@ export default function Home() {
                 <button
                   key={number}
                   onClick={() => handleNumberClick(number.toString())}
-                  className="bg-gray-700 text-white p-4 rounded-lg active:bg-gray-600 hover:bg-gray-600 transition"
+                  className="bg-gray-700 text-white p-4 rounded-lg active:bg-gray-600 sm:hover:bg-gray-600 transition"
                 >
                   {number}
                 </button>
               ))}
               <button
                 onClick={handleClearClick}
-                className="bg-yellow-500 text-white p-4 rounded-lg active:bg-yellow-600 hover:bg-yellow-600 transition"
+                className="bg-yellow-500 text-white p-4 rounded-lg active:bg-yellow-600 sm:hover:bg-yellow-600 transition"
               >
                 AC
               </button>
               <button
                 onClick={() => handleNumberClick("0")}
-                className="bg-gray-700 text-white p-4 rounded-lg hover:bg-gray-600 transition"
+                className="bg-gray-700 text-white p-4 rounded-lg active:bg-gray-600 sm:hover:bg-gray-600 transition"
               >
                 0
               </button>
               <button
                 onClick={handleBackspaceClick}
-                className="bg-yellow-500 text-white p-4 rounded-lg active:bg-yellow-600 hover:bg-yellow-600 transition"
+                className="bg-yellow-500 text-white p-4 rounded-lg active:bg-yellow-600 sm:hover:bg-yellow-600 transition"
               >
                 ←
               </button>

@@ -11,9 +11,11 @@
   "dependencies": {
     "@clerk/nextjs": "^6.11.3",
     "@mediapipe/hands": "^0.4.1675469240",
+    "framer-motion": "^12.4.7",
     "next": "15.1.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
     "postcss": "^8",
