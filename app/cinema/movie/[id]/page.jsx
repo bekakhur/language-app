@@ -5,50 +5,6 @@ import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Моковые данные фильмов
-const movies = [
-  {
-    id: "1",
-    title: "Dune: Part Two",
-    description: "Эпическое продолжение путешествия Пола Атрейдеса...",
-    genre: "Sci-Fi",
-    duration: "165 мин",
-    image: "/detachment.jpg",
-  },
-  {
-    id: "2",
-    title: "Oppenheimer",
-    description: "История создания ядерного оружия...",
-    genre: "Drama",
-    duration: "180 мин",
-    image: "/detachment.jpg",
-  },
-  {
-    id: "3",
-    title: "Barbie",
-    description: "Фильм о приключениях Барби в реальном мире...",
-    genre: "Comedy",
-    duration: "114 мин",
-    image: "/detachment.jpg",
-  },
-  {
-    id: "4",
-    title: "Barbie",
-    description: "Фильм о приключениях Барби в реальном мире...",
-    genre: "Comedy",
-    duration: "114 мин",
-    image: "/detachment.jpg",
-  },
-  {
-    id: "5",
-    title: "Barbie",
-    description: "Фильм о приключениях Барби в реальном мире...",
-    genre: "Comedy",
-    duration: "114 мин",
-    image: "/detachment.jpg",
-  },
-];
-
 export default function MoviePage() {
   const params = useParams();
   const router = useRouter();
@@ -56,8 +12,17 @@ export default function MoviePage() {
 
   useEffect(() => {
     if (params?.id) {
-      const foundMovie = movies.find((m) => m.id === params.id);
-      setMovie(foundMovie);
+      fetch("/movies.json")
+        .then((response) => response.json())
+        .then((data) => {
+          // Приводим params.id к числу для корректного сравнения
+          const movieId = parseInt(params.id, 10);
+          const foundMovie = data.find((m) => m.id === movieId);
+          setMovie(foundMovie);
+        })
+        .catch((error) => {
+          console.error("Ошибка загрузки фильмов:", error);
+        });
     }
   }, [params]);
 
@@ -72,7 +37,6 @@ export default function MoviePage() {
         transition={{ duration: 1 }}
         className="max-w-4xl w-full"
       >
-        {/* Постер и информация */}
         <div className="flex flex-col md:flex-row bg-gray-800 rounded-lg shadow-lg overflow-hidden">
           <Image
             src={movie.image}
@@ -87,6 +51,17 @@ export default function MoviePage() {
               {movie.genre} · {movie.duration}
             </p>
             <p className="mt-4">{movie.description}</p>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/w7lBleOF9Pw?si=TuJDmveVQfV1xJbY"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="h-[200px] w-full mt-10"
+            ></iframe>
             <button
               onClick={() => router.push(`/cinema/booking/${movie.id}`)}
               className="mt-6 px-6 py-3 bg-red-500 hover:bg-red-600 transition rounded-lg text-lg"

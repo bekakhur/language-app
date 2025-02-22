@@ -1,41 +1,46 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-
-// Фильмы
-const movies = [
-  { id: 1, title: "Dune: Part Two", genre: "Sci-Fi", image: "/detachment.jpg" },
-  { id: 2, title: "Oppenheimer", genre: "Drama", image: "/detachment.jpg" },
-  { id: 3, title: "Barbie", genre: "Comedy", image: "/detachment.jpg" },
-  { id: 4, title: "The Batman", genre: "Action", image: "/detachment.jpg" },
-  { id: 5, title: "Interstellar", genre: "Sci-Fi", image: "/detachment.jpg" },
-];
-
-const genres = ["Все", ...new Set(movies.map((m) => m.genre))];
+import Link from "next/link";
 
 export default function Home() {
+  const [movies, setMovies] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("Все");
+  const [genres, setGenres] = useState(["Все"]);
+
+  useEffect(() => {
+    fetch("/movies.json")
+      .then((response) => response.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setMovies(data);
+          const uniqueGenres = ["Все", ...new Set(data.map((m) => m.genre))];
+          setGenres(uniqueGenres);
+        } else {
+          console.error("Данные не являются массивом:", data);
+        }
+      })
+      .catch((error) => console.error("Ошибка загрузки данных:", error));
+  }, []);
+
   const filteredMovies =
     selectedGenre === "Все"
       ? movies
       : movies.filter((m) => m.genre === selectedGenre);
 
   return (
-    <main className="min-h-screen bg-gray-900 text-white">
+    <main className="min-h-screen bg-gray-950 text-white">
       {/* Hero Section */}
       <section
         className="relative h-[500px] flex items-center justify-center text-center bg-cover bg-center"
-        style={{ backgroundImage: "/detachment.jpg" }}
+        style={{ backgroundImage: "url('/detachment.jpg')" }}
       >
-        <div className="bg-black/50 w-full h-full flex flex-col items-center justify-center p-6">
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/80 to-transparent" />
+        <div className="relative z-10 max-w-4xl px-6">
           <motion.h1
-            className="text-5xl font-bold"
+            className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-purple-500"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -43,75 +48,30 @@ export default function Home() {
             Добро пожаловать в CineX
           </motion.h1>
           <motion.p
-            className="text-lg text-gray-300 mt-2"
+            className="text-lg md:text-xl text-gray-300 mt-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Погрузись в мир кино и купи билеты онлайн
+            Погрузись в мир кино и наслаждайся лучшими фильмами в одном месте
           </motion.p>
-          <motion.a
-            href="#movies"
-            className="mt-6 px-6 py-3 bg-red-500 hover:bg-red-600 transition rounded-lg text-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-          >
-            Смотреть фильмы
-          </motion.a>
         </div>
       </section>
 
-      {/* Карусель */}
-      <section className="container mx-auto py-12 px-6">
-        <h2 className="text-3xl font-semibold text-center mb-6">
-          Популярные фильмы
-        </h2>
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1.2}
-          breakpoints={{ 768: { slidesPerView: 3 } }}
-          navigation
-          autoplay={{ delay: 6000 }}
-          loop
-        >
-          {movies.map((movie) => (
-            <SwiperSlide key={movie.id}>
-              <a href={`/cinema/movie/${movie.id}`}>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-gray-800 p-4 rounded-xl shadow-lg"
-                >
-                  <Image
-                    src={movie.image}
-                    width={500}
-                    height={300}
-                    alt={movie.title}
-                    className="rounded-lg"
-                  />
-                  <h3 className="text-xl font-bold mt-4">{movie.title}</h3>
-                </motion.div>
-              </a>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
-
       {/* Фильтрация по жанрам */}
-      <section className="container mx-auto py-8 px-6">
-        <h2 className="text-3xl font-semibold text-center mb-6">
+      <section className="container mx-auto py-16 px-6">
+        <h2 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-purple-500">
           Сейчас в кино
         </h2>
-        <div className="flex justify-center space-x-4 mb-6">
+        <div className="flex justify-center gap-2 sm:gap-6 mb-8 mx-8 flex-wrap">
           {genres.map((genre) => (
             <button
               key={genre}
               onClick={() => setSelectedGenre(genre)}
-              className={`px-4 py-2 rounded-lg transition ${
+              className={`px-4 py-2 rounded-full transition-all ${
                 selectedGenre === genre
-                  ? "bg-red-500"
-                  : "bg-gray-700 hover:bg-gray-600"
+                  ? "bg-gradient-to-r from-red-500 to-purple-500 text-white"
+                  : "bg-gray-800 hover:bg-gray-700 text-gray-300"
               }`}
             >
               {genre}
@@ -120,33 +80,42 @@ export default function Home() {
         </div>
 
         {/* Фильмы */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredMovies.map((movie) => (
             <motion.div
               key={movie.id}
               whileHover={{ scale: 1.05 }}
-              className="bg-gray-800 p-4 rounded-xl shadow-lg"
+              className="bg-gray-900/50 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-gray-800 cursor-pointer"
             >
-              <a href={`/cinema/movie/${movie.id}`}>
-                <Image
-                  src={movie.image}
-                  width={500}
-                  height={300}
-                  alt={movie.title}
-                  className="rounded-lg"
-                />
-              </a>
-              <h3 className="text-xl font-bold mt-4">{movie.title}</h3>
-              <a
+              <Link href={`/cinema/movie/${movie.id}`}>
+                <div>
+                  <Image
+                    src={movie.image}
+                    width={500}
+                    height={300}
+                    alt={movie.title}
+                    className="rounded-lg"
+                    priority
+                  />
+                  <h3 className="text-2xl font-bold mt-4">{movie.title}</h3>
+                  <p className="text-gray-400 mt-2">{movie.genre}</p>
+                </div>
+              </Link>
+              <Link
                 href={`/cinema/booking/${movie.id}`}
-                className="mt-4 inline-block px-4 py-2 bg-red-500 hover:bg-red-600 transition rounded-lg"
+                className="mt-4 inline-block px-6 py-2 bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-600 hover:to-purple-600 transition-all rounded-full text-lg font-semibold"
               >
                 Купить билет
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
       </section>
+
+      {/* Футер */}
+      <footer className="bg-gray-900/50 backdrop-blur-md mt-16 py-8 text-center">
+        <p className="text-gray-400">© 2023 CineX. Все права защищены.</p>
+      </footer>
     </main>
   );
 }

@@ -101,7 +101,7 @@ export default function Home() {
         />
         <title>Grammaticus Math</title>
       </Head>
-      <div className="flex flex-col items-center sm:justify-center pt-16 sm:pt-4 min-h-screen bg-black text-white font-mono p-4">
+      <div className="flex flex-col items-center sm:justify-center pt-16 sm:pt-4 min-h-screen bg-gray-900 text-white font-mono p-4">
         {!gameStarted ? (
           <button
             onClick={startGame}
