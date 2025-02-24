@@ -132,8 +132,7 @@ const MemoryGame = () => {
 
         {/* Длина списка слов */}
         <div className={!gameOver ? "text-center text-3xl mb-6" : "hidden"}>
-          Score:{" "}
-          <span className="text-4xl font-bold ml-1">{currentStep + 1}</span>
+          Score: <span className="text-4xl font-bold ml-1">{currentStep}</span>
         </div>
 
         {/* Сообщение о результате игры */}
@@ -148,7 +147,7 @@ const MemoryGame = () => {
             <p>{message}</p>
             <p className="text-2xl">
               Score:{" "}
-              <span className="text-4xl font-bold ml-1">{currentStep + 1}</span>
+              <span className="text-4xl font-bold ml-1">{currentStep}</span>
             </p>
             {gameOver && (
               <div className="flex justify-center">
