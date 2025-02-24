@@ -139,7 +139,7 @@ const MemoryGame = () => {
         {/* Сообщение о результате игры */}
         {message && (
           <div
-            className={`p-8 m-4 shadow-2xl flex flex-col gap-6 text-white justify-center items-center rounded-lg text-center text-5xl font-semibold ${
+            className={`p-8 m-4 shadow-lg shadow-red-200/10 flex flex-col gap-6 text-white justify-center items-center rounded-lg text-center text-5xl font-semibold ${
               gameOver && message.includes("Game")
                 ? "bg-gradient-to-t from-red-500 to-red-400 text-gray-900"
                 : "bg-green-100 text-green-800"
@@ -166,12 +166,12 @@ const MemoryGame = () => {
         {/* Две колонки всегда в ряд, но уже */}
         <div className={!gameOver ? "grid grid-row-2 gap-2" : "hidden"}>
           {/* Поле для перетаскивания слов */}
-          <div className="p-4 bg-white min-h-24 rounded-lg shadow-lg border border-purple-100">
+          <div className="p-4 bg-white min-h-24 rounded-lg shadow-lg  border-purple-100">
             <div className="flex flex-wrap gap-2">
               {droppedWords.map((word, index) => (
                 <div
                   key={index}
-                  className="p-2 w-auto bg-orange-50 text-gray-900 rounded-lg shadow-md text-center"
+                  className="p-2 w-auto bg-orange-50 text-gray-900 border-[1px] border-black/15 rounded-lg shadow-md text-center"
                 >
                   {word}
                 </div>
@@ -187,7 +187,7 @@ const MemoryGame = () => {
                   <div
                     key={index}
                     onClick={() => handleWordClick(word)} // Обработчик клика
-                    className="p-2 w-auto bg-blue-100 text-gray-900 rounded-lg shadow-md text-center cursor-pointer sm:hover:bg-blue-100 active:bg-blue-100 transition-colors"
+                    className="p-2 w-auto bg-blue-100 text-gray-900 rounded-lg border-[1px] border-black/15 shadow-md text-center cursor-pointer sm:hover:bg-blue-100 active:bg-blue-100 transition-colors"
                   >
                     {word}
                   </div>
