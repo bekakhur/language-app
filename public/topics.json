@@ -1069,6 +1069,649 @@
           "answer": "down"
         }
       ]
+    },
+
+    {
+      "id": "11",
+      "title": "Articles (Definite, Indefinite, Zero)",
+      "description": "Practice using the correct articles (a, an, the, or no article) in various sentences. Fill in the blanks with the appropriate article or leave it blank if no article is needed.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "She bought ___ apple and a banana from the store.",
+          "answer": "an"
+        },
+        {
+          "id": 2,
+          "sentence": "I saw ___ interesting documentary about space yesterday.",
+          "answer": "an"
+        },
+        {
+          "id": 3,
+          "sentence": "He's ___ best player on the team.",
+          "answer": "the"
+        },
+        {
+          "id": 4,
+          "sentence": "They live in ___ small village near the mountains.",
+          "answer": "a"
+        },
+        {
+          "id": 5,
+          "sentence": "Can you pass me ___ salt, please?",
+          "answer": "the"
+        },
+        {
+          "id": 6,
+          "sentence": "I don't usually drink ___ coffee in the evening.",
+          "answer": ""
+        },
+        {
+          "id": 7,
+          "sentence": "There was ___ unexpected delay at the airport.",
+          "answer": "an"
+        },
+        {
+          "id": 8,
+          "sentence": "She's studying to become ___ doctor.",
+          "answer": "a"
+        },
+        {
+          "id": 9,
+          "sentence": "We visited ___ Louvre during our trip to Paris.",
+          "answer": "the"
+        },
+        {
+          "id": 10,
+          "sentence": "___ water in this lake is crystal clear.",
+          "answer": "The"
+        },
+        {
+          "id": 11,
+          "sentence": "I found ___ old coin in the garden.",
+          "answer": "an"
+        },
+        {
+          "id": 12,
+          "sentence": "He’s looking for ___ job in finance.",
+          "answer": "a"
+        },
+        {
+          "id": 13,
+          "sentence": "Do you know ___ answer to this question?",
+          "answer": "the"
+        },
+        {
+          "id": 14,
+          "sentence": "She speaks ___ Spanish fluently.",
+          "answer": ""
+        },
+        {
+          "id": 15,
+          "sentence": "I heard ___ strange noise coming from the attic.",
+          "answer": "a"
+        },
+        {
+          "id": 16,
+          "sentence": "They climbed ___ tallest mountain in the region.",
+          "answer": "the"
+        },
+        {
+          "id": 17,
+          "sentence": "We had ___ amazing time at the concert.",
+          "answer": "an"
+        },
+        {
+          "id": 18,
+          "sentence": "She’s reading ___ novel by Jane Austen.",
+          "answer": "a"
+        },
+        {
+          "id": 19,
+          "sentence": "I don’t like ___ cold weather.",
+          "answer": ""
+        },
+        {
+          "id": 20,
+          "sentence": "They went for ___ walk in the park.",
+          "answer": "a"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Word Formation",
+      "description": "Practice transforming base words into the correct form (noun, verb, adjective, or adverb) to complete each sentence. Fill in the blanks with the appropriate word form.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "Her sudden ___ surprised everyone at the party.",
+          "answer": "arrival"
+        },
+        {
+          "id": 2,
+          "sentence": "The company's ___ has been steadily increasing.",
+          "answer": "growth"
+        },
+        {
+          "id": 3,
+          "sentence": "He gave a very ___ explanation of the concept.",
+          "answer": "clear"
+        },
+        {
+          "id": 4,
+          "sentence": "We need to ___ our strategy for better results.",
+          "answer": "modify"
+        },
+        {
+          "id": 5,
+          "sentence": "Her ___ attitude inspired the whole team.",
+          "answer": "positive"
+        },
+        {
+          "id": 6,
+          "sentence": "The ___ of the new policy was unexpected.",
+          "answer": "announcement"
+        },
+        {
+          "id": 7,
+          "sentence": "He acted very ___ during the interview.",
+          "answer": "professionally"
+        },
+        {
+          "id": 8,
+          "sentence": "The ___ of the project took longer than anticipated.",
+          "answer": "completion"
+        },
+        {
+          "id": 9,
+          "sentence": "She made a ___ decision under pressure.",
+          "answer": "quick"
+        },
+        {
+          "id": 10,
+          "sentence": "The movie's ___ was breathtaking.",
+          "answer": "cinematography"
+        },
+        {
+          "id": 11,
+          "sentence": "I appreciate your ___ to helping the community.",
+          "answer": "dedication"
+        },
+        {
+          "id": 12,
+          "sentence": "His ___ was evident in his body language.",
+          "answer": "nervousness"
+        },
+        {
+          "id": 13,
+          "sentence": "The ___ of this dish is outstanding.",
+          "answer": "flavor"
+        },
+        {
+          "id": 14,
+          "sentence": "We should ___ the schedule to fit more activities.",
+          "answer": "adjust"
+        },
+        {
+          "id": 15,
+          "sentence": "The lecture was incredibly ___ and engaging.",
+          "answer": "informative"
+        },
+        {
+          "id": 16,
+          "sentence": "His ___ to detail is impressive.",
+          "answer": "attention"
+        },
+        {
+          "id": 17,
+          "sentence": "The ___ of the data will take some time.",
+          "answer": "analysis"
+        },
+        {
+          "id": 18,
+          "sentence": "She delivered her speech with great ___.",
+          "answer": "confidence"
+        },
+        {
+          "id": 19,
+          "sentence": "The ___ weather forced them to cancel the event.",
+          "answer": "unpredictable"
+        },
+        {
+          "id": 20,
+          "sentence": "The children played ___ in the garden all afternoon.",
+          "answer": "happily"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Linking Words & Conjunctions",
+      "description": "Practice using linking words and conjunctions to connect ideas and form cohesive sentences. Fill in the blanks with the correct word or phrase.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "She stayed home ___ she wasn't feeling well.",
+          "answer": "because"
+        },
+        {
+          "id": 2,
+          "sentence": "I’ll call you ___ I arrive at the airport.",
+          "answer": "when"
+        },
+        {
+          "id": 3,
+          "sentence": "He failed the exam, ___ he didn’t study enough.",
+          "answer": "since"
+        },
+        {
+          "id": 4,
+          "sentence": "I enjoy hiking, ___ my brother prefers cycling.",
+          "answer": "whereas"
+        },
+        {
+          "id": 5,
+          "sentence": "We left early ___ avoid the traffic.",
+          "answer": "to"
+        },
+        {
+          "id": 6,
+          "sentence": "They worked late ___ they could finish the project on time.",
+          "answer": "so that"
+        },
+        {
+          "id": 7,
+          "sentence": "She couldn’t attend the meeting ___ she had another appointment.",
+          "answer": "as"
+        },
+        {
+          "id": 8,
+          "sentence": "I’ll join you for dinner, ___ I finish work early.",
+          "answer": "provided"
+        },
+        {
+          "id": 9,
+          "sentence": "He kept talking ___ I asked him to be quiet.",
+          "answer": "even though"
+        },
+        {
+          "id": 10,
+          "sentence": "The company expanded rapidly, ___ they managed to maintain quality.",
+          "answer": "yet"
+        },
+        {
+          "id": 11,
+          "sentence": "She decided to go out, ___ the weather was terrible.",
+          "answer": "although"
+        },
+        {
+          "id": 12,
+          "sentence": "I'll help you ___ you promise to do your best.",
+          "answer": "if"
+        },
+        {
+          "id": 13,
+          "sentence": "We went to bed early ___ we were exhausted.",
+          "answer": "because"
+        },
+        {
+          "id": 14,
+          "sentence": "He studies hard ___ he wants to pass the exam.",
+          "answer": "as"
+        },
+        {
+          "id": 15,
+          "sentence": "I’ll come to the party ___ I’m not feeling well.",
+          "answer": "unless"
+        },
+        {
+          "id": 16,
+          "sentence": "I enjoy reading, ___ I don't have much time for it.",
+          "answer": "but"
+        },
+        {
+          "id": 17,
+          "sentence": "They’ll call us ___ they have more information.",
+          "answer": "once"
+        },
+        {
+          "id": 18,
+          "sentence": "The event was canceled ___ the storm.",
+          "answer": "due to"
+        },
+        {
+          "id": 19,
+          "sentence": "He stayed calm, ___ the pressure was immense.",
+          "answer": "despite"
+        },
+        {
+          "id": 20,
+          "sentence": "She went to the store ___ buy some groceries.",
+          "answer": "in order to"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Adjective and Adverb Usage",
+      "description": "Practice distinguishing between adjectives and adverbs, and using them correctly in sentences. Fill in the blanks with the correct form of the word.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "She speaks very ___ for someone so young. (fluent)",
+          "answer": "fluently"
+        },
+        {
+          "id": 2,
+          "sentence": "It was a ___ decision that changed everything. (quick)",
+          "answer": "quick"
+        },
+        {
+          "id": 3,
+          "sentence": "He ran ___ to catch the bus. (fast)",
+          "answer": "fast"
+        },
+        {
+          "id": 4,
+          "sentence": "The cake smells really ___. (good)",
+          "answer": "good"
+        },
+        {
+          "id": 5,
+          "sentence": "She looked at him ___ after the argument. (cold)",
+          "answer": "coldly"
+        },
+        {
+          "id": 6,
+          "sentence": "They worked ___ to finish the project on time. (hard)",
+          "answer": "hard"
+        },
+        {
+          "id": 7,
+          "sentence": "It was a ___ planned trip. (careful)",
+          "answer": "carefully"
+        },
+        {
+          "id": 8,
+          "sentence": "The students listened ___ to the lecture. (attentive)",
+          "answer": "attentively"
+        },
+        {
+          "id": 9,
+          "sentence": "She sang so ___ that the audience was amazed. (beautiful)",
+          "answer": "beautifully"
+        },
+        {
+          "id": 10,
+          "sentence": "He gave a ___ speech at the ceremony. (powerful)",
+          "answer": "powerful"
+        },
+        {
+          "id": 11,
+          "sentence": "I arrived ___, so I missed the beginning. (late)",
+          "answer": "late"
+        },
+        {
+          "id": 12,
+          "sentence": "The weather was surprisingly ___. (warm)",
+          "answer": "warm"
+        },
+        {
+          "id": 13,
+          "sentence": "She responded ___ to the criticism. (angry)",
+          "answer": "angrily"
+        },
+        {
+          "id": 14,
+          "sentence": "We were ___ about the results. (happy)",
+          "answer": "happy"
+        },
+        {
+          "id": 15,
+          "sentence": "He drives very ___. (careful)",
+          "answer": "carefully"
+        },
+        {
+          "id": 16,
+          "sentence": "The room was ___ decorated for the party. (beautiful)",
+          "answer": "beautifully"
+        },
+        {
+          "id": 17,
+          "sentence": "They were ___ after the long journey. (tired)",
+          "answer": "tired"
+        },
+        {
+          "id": 18,
+          "sentence": "She answered the question ___. (correct)",
+          "answer": "correctly"
+        },
+        {
+          "id": 19,
+          "sentence": "The book was so ___ that I couldn’t put it down. (interesting)",
+          "answer": "interesting"
+        },
+        {
+          "id": 20,
+          "sentence": "He handled the situation very ___. (calm)",
+          "answer": "calmly"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Emphasis and Cleft Sentences",
+      "description": "Practice using cleft sentences and other structures to add emphasis in English. Fill in the blanks with the correct words to complete the sentences.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "___ I wanted to see was the sunset.",
+          "answer": "What"
+        },
+        {
+          "id": 2,
+          "sentence": "It was ___ she told me the truth.",
+          "answer": "then"
+        },
+        {
+          "id": 3,
+          "sentence": "___ really bothers me is the noise.",
+          "answer": "What"
+        },
+        {
+          "id": 4,
+          "sentence": "It was ___ that convinced him to leave.",
+          "answer": "her speech"
+        },
+        {
+          "id": 5,
+          "sentence": "___ I need is a bit of rest.",
+          "answer": "What"
+        },
+        {
+          "id": 6,
+          "sentence": "It wasn’t until midnight ___ they arrived.",
+          "answer": "that"
+        },
+        {
+          "id": 7,
+          "sentence": "___ I admire most about her is her honesty.",
+          "answer": "What"
+        },
+        {
+          "id": 8,
+          "sentence": "It is ___ makes her happy.",
+          "answer": "traveling"
+        },
+        {
+          "id": 9,
+          "sentence": "Only when the sun set ___ how beautiful the view was.",
+          "answer": "did they realize"
+        },
+        {
+          "id": 10,
+          "sentence": "It was ___ who helped me with my project.",
+          "answer": "my brother"
+        },
+        {
+          "id": 11,
+          "sentence": "___ surprises me is how quickly they finished the work.",
+          "answer": "What"
+        },
+        {
+          "id": 12,
+          "sentence": "It was ___ I met last year in Spain.",
+          "answer": "her"
+        },
+        {
+          "id": 13,
+          "sentence": "Not until I spoke to her ___ how serious the situation was.",
+          "answer": "did I understand"
+        },
+        {
+          "id": 14,
+          "sentence": "It’s not the result that matters, but ___ you learn from the experience.",
+          "answer": "what"
+        },
+        {
+          "id": 15,
+          "sentence": "It is ___ who always makes me laugh.",
+          "answer": "my best friend"
+        },
+        {
+          "id": 16,
+          "sentence": "The reason I left early ___ I wasn’t feeling well.",
+          "answer": "was that"
+        },
+        {
+          "id": 17,
+          "sentence": "___ made the evening special was the live music.",
+          "answer": "What"
+        },
+        {
+          "id": 18,
+          "sentence": "It wasn’t the weather ___ ruined the trip, but the traffic.",
+          "answer": "that"
+        },
+        {
+          "id": 19,
+          "sentence": "___ I find most challenging is understanding fast speech.",
+          "answer": "What"
+        },
+        {
+          "id": 20,
+          "sentence": "It was ___ who told me about the job opening.",
+          "answer": "John"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Advanced Prepositions and Prepositional Phrases",
+      "description": "Practice using complex prepositions and prepositional phrases in sentences. Fill in the blanks with the correct preposition or phrase.",
+      "exercises": [
+        {
+          "id": 1,
+          "sentence": "He succeeded ___ his persistence and hard work.",
+          "answer": "through"
+        },
+        {
+          "id": 2,
+          "sentence": "She’s completely ___ control of the situation.",
+          "answer": "in"
+        },
+        {
+          "id": 3,
+          "sentence": "I couldn’t concentrate ___ the noise outside.",
+          "answer": "because of"
+        },
+        {
+          "id": 4,
+          "sentence": "They moved to the countryside ___ a better quality of life.",
+          "answer": "for"
+        },
+        {
+          "id": 5,
+          "sentence": "He resigned ___ personal reasons.",
+          "answer": "due to"
+        },
+        {
+          "id": 6,
+          "sentence": "She acted ___ the advice of her lawyer.",
+          "answer": "on"
+        },
+        {
+          "id": 7,
+          "sentence": "I’m not ___ the mood for jokes right now.",
+          "answer": "in"
+        },
+        {
+          "id": 8,
+          "sentence": "The company is ___ the process of restructuring.",
+          "answer": "in"
+        },
+        {
+          "id": 9,
+          "sentence": "She arrived late ___ the heavy traffic.",
+          "answer": "because of"
+        },
+        {
+          "id": 10,
+          "sentence": "I’m ___ no obligation to explain myself.",
+          "answer": "under"
+        },
+        {
+          "id": 11,
+          "sentence": "The event was canceled ___ unforeseen circumstances.",
+          "answer": "due to"
+        },
+        {
+          "id": 12,
+          "sentence": "He left early ___ catch the last train.",
+          "answer": "in order to"
+        },
+        {
+          "id": 13,
+          "sentence": "She got the job ___ her impressive portfolio.",
+          "answer": "thanks to"
+        },
+        {
+          "id": 14,
+          "sentence": "I’m writing ___ behalf of the whole team.",
+          "answer": "on"
+        },
+        {
+          "id": 15,
+          "sentence": "The contract is valid ___ further notice.",
+          "answer": "until"
+        },
+        {
+          "id": 16,
+          "sentence": "He refused to comment ___ the allegations.",
+          "answer": "on"
+        },
+        {
+          "id": 17,
+          "sentence": "They’re meeting ___ the sake of reaching an agreement.",
+          "answer": "for"
+        },
+        {
+          "id": 18,
+          "sentence": "She works ___ close collaboration with researchers.",
+          "answer": "in"
+        },
+        {
+          "id": 19,
+          "sentence": "He apologized ___ any inconvenience caused.",
+          "answer": "for"
+        },
+        {
+          "id": 20,
+          "sentence": "The decision was made ___ careful consideration.",
+          "answer": "after"
+        }
+      ]
     }
   ]
 }

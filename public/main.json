@@ -49,6 +49,36 @@
       "id": "10",
       "title": "Phrasal Verbs",
       "description": "Practice forming sentences with commonly used phrasal verbs in English. Complete the sentences by filling in the blanks with the correct phrasal verb."
+    },
+    {
+      "id": "11",
+      "title": "Articles (Definite, Indefinite, Zero)",
+      "description": "Practice using the correct articles (a, an, the, or no article) in various sentences. Fill in the blanks with the appropriate article or leave it blank if no article is needed."
+    },
+    {
+      "id": "12",
+      "title": "Word Formation",
+      "description": "Practice transforming base words into the correct form (noun, verb, adjective, or adverb) to complete each sentence. Fill in the blanks with the appropriate word form."
+    },
+    {
+      "id": "13",
+      "title": "Linking Words & Conjunctions",
+      "description": "Practice using linking words and conjunctions to connect ideas and form cohesive sentences. Fill in the blanks with the correct word or phrase."
+    },
+    {
+      "id": "14",
+      "title": "Adjective and Adverb Usage",
+      "description": "Practice distinguishing between adjectives and adverbs, and using them correctly in sentences. Fill in the blanks with the correct form of the word."
+    },
+    {
+      "id": "15",
+      "title": "Emphasis and Cleft Sentences",
+      "description": "Practice using cleft sentences and other structures to add emphasis in English. Fill in the blanks with the correct words to complete the sentences."
+    },
+    {
+      "id": "16",
+      "title": "Advanced Prepositions and Prepositional Phrases",
+      "description": "Practice using complex prepositions and prepositional phrases in sentences. Fill in the blanks with the correct preposition or phrase."
     }
   ]
 }

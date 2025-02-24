@@ -139,7 +139,7 @@ const MemoryGame = () => {
         {/* Сообщение о результате игры */}
         {message && (
           <div
-            className={`p-8 m-4 shadow-lg shadow-red-200/10 flex flex-col gap-6 text-white justify-center items-center rounded-lg text-center text-5xl font-semibold ${
+            className={`p-8 m-4 shadow-lg shadow-red-200/10 flex flex-col gap-6 text-white justify-center items-center rounded-lg text-center text-4xl sm:text-5xl font-semibold ${
               gameOver && message.includes("Game")
                 ? "bg-gradient-to-t from-red-500 to-red-400 text-gray-900"
                 : "bg-green-100 text-green-800"
