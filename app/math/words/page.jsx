@@ -124,20 +124,14 @@ const MemoryGame = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b portrait:bg-gradient-to-b landscape:bg-gradient-to-b select-none from-orange-200 to-orange-300 sm:pt-12 p-8">
+    <div className="min-h-screen flex flex-col select-none text-white bg-gray-900 sm:pt-12 p-8">
       <div className="max-w-xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+        <h1 className="text-4xl font-bold text-center mb-8">
           I Went To The Market And Bought
         </h1>
 
         {/* Длина списка слов */}
-        <div
-          className={
-            !gameOver
-              ? "text-center text-2xl font-semibold text-gray-800 mb-6"
-              : "hidden"
-          }
-        >
+        <div className={!gameOver ? "text-center text-3xl mb-6" : "hidden"}>
           Score:{" "}
           <span className="text-4xl font-bold ml-1">{currentStep + 1}</span>
         </div>
@@ -177,7 +171,7 @@ const MemoryGame = () => {
               {droppedWords.map((word, index) => (
                 <div
                   key={index}
-                  className="p-2 w-auto bg-orange-100 text-gray-900 rounded-lg shadow-md text-center"
+                  className="p-2 w-auto bg-orange-50 text-gray-900 rounded-lg shadow-md text-center"
                 >
                   {word}
                 </div>
@@ -208,7 +202,7 @@ const MemoryGame = () => {
               <img
                 src="/up-arrow.svg"
                 alt=""
-                className="h-6 w-6 rotate-45 opacity-50"
+                className="h-6 w-6 rotate-45 opacity-80"
               />
             </div>
           </div>
