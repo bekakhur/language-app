@@ -103,17 +103,14 @@ const MemoryGame = () => {
     }
   };
 
-  // Обработчик события drop для поля перетаскивания
-  const handleDrop = (e) => {
-    e.preventDefault();
-    const word = e.dataTransfer.getData("text/plain");
-
-    // Проверяем, правильно ли перетащено слово
+  // Обработчик клика по слову в правом поле
+  const handleWordClick = (word) => {
+    // Проверяем, правильно ли выбрано слово
     if (word === gameWords[droppedWords.length]) {
       setDroppedWords([...droppedWords, word]); // Добавляем слово в массив перетащенных
       setScore(droppedWords.length + 1); // Обновляем счет
 
-      // Удаляем перетащенное слово из shuffledWords
+      // Удаляем выбранное слово из shuffledWords
       setShuffledWords((prev) => prev.filter((w) => w !== word));
 
       // Если все слова на текущем шаге перетащены, переходим к следующему шагу
@@ -126,13 +123,8 @@ const MemoryGame = () => {
     }
   };
 
-  // Обработчик события drag over для поля перетаскивания
-  const handleDragOver = (e) => {
-    e.preventDefault();
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br select-none from-purple-100 to-blue-100 sm:pt-12 p-8">
+    <div className="min-h-screen bg-gradient-to-br portrait:bg-gradient-to-br landscape:bg-gradient-to-br select-none from-purple-100 to-blue-100 sm:pt-12 p-8">
       <div className="max-w-xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-purple-900 mb-8">
           I Went To The Market And Bought
@@ -166,12 +158,7 @@ const MemoryGame = () => {
         {/* Две колонки всегда в ряд, но уже */}
         <div className={!gameOver ? "grid grid-row-2 gap-2" : "hidden"}>
           {/* Поле для перетаскивания слов */}
-          <div
-            className="p-4 bg-white min-h-24 rounded-lg shadow-lg border border-purple-100"
-            onDrop={handleDrop}
-            onDragOver={handleDragOver}
-          >
-            {/* <h2 className="text-xl font-semibold text-purple-800 mb-4">2</h2> */}
+          <div className="p-4 bg-white min-h-24 rounded-lg shadow-lg border border-purple-100">
             <div className="flex flex-wrap gap-2">
               {droppedWords.map((word, index) => (
                 <div
@@ -186,17 +173,13 @@ const MemoryGame = () => {
 
           {/* Поле с перемешанными словами для запоминания */}
           <div className="p-4 bg-white min-h-24 relative rounded-lg shadow-lg border border-purple-100">
-            {/* <h2 className="text-xl font-semibold text-blue-800 mb-4">1</h2> */}
             <div className="flex flex-wrap gap-2">
               {!gameOver &&
                 shuffledWords.map((word, index) => (
                   <div
                     key={index}
-                    draggable
-                    onDragStart={(e) =>
-                      e.dataTransfer.setData("text/plain", word)
-                    }
-                    className="p-2 w-auto bg-blue-50 text-blue-900 rounded-lg shadow-sm text-center cursor-move hover:bg-blue-100 transition-colors"
+                    onClick={() => handleWordClick(word)} // Обработчик клика
+                    className="p-2 w-auto bg-blue-50 text-blue-900 rounded-lg shadow-sm text-center cursor-pointer sm:hover:bg-blue-100 transition-colors"
                   >
                     {word}
                   </div>

@@ -31,7 +31,7 @@ export default function Home() {
       : movies.filter((m) => m.genre === selectedGenre);
 
   return (
-    <main className="min-h-screen bg-gray-950 text-white">
+    <main className="min-h-screen bg-gray-950 portrait:bg-gray-950 landscape:bg-gray-950 text-white">
       {/* Hero Section */}
       <section
         className="relative h-[500px] flex items-center justify-center text-center bg-cover bg-center"

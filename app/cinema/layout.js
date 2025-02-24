@@ -10,7 +10,7 @@ export default function CinemaLayout({ children }) {
           content="black-translucent"
         />
       </Head>
-      <div className="flex flex-col w-full bg-black min-h-screen">
+      <div className="flex flex-col w-full bg-black portrait:bg-black landscape:bg-black min-h-screen">
         {children}
       </div>
     </>
