@@ -124,7 +124,7 @@ const MemoryGame = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col select-none text-white bg-gray-900 sm:pt-12 p-8">
+    <div className="min-h-screen flex flex-col select-none text-white bg-gray-900 sm:pt-12 p-8 pt-4">
       <div className="max-w-xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">
           I Went To The Market And Bought
@@ -166,7 +166,7 @@ const MemoryGame = () => {
         {/* Две колонки всегда в ряд, но уже */}
         <div className={!gameOver ? "grid grid-row-2 gap-2" : "hidden"}>
           {/* Поле для перетаскивания слов */}
-          <div className="p-4 bg-white min-h-24 rounded-lg shadow-lg  border-purple-100">
+          <div className="p-4 bg-white min-h-44 rounded-lg shadow-lg  border-purple-100">
             <div className="flex flex-wrap gap-2">
               {droppedWords.map((word, index) => (
                 <div
@@ -180,8 +180,8 @@ const MemoryGame = () => {
           </div>
 
           {/* Поле с перемешанными словами для запоминания */}
-          <div className="p-4 bg-white min-h-24 relative rounded-lg shadow-lg border border-purple-100">
-            <div className="flex flex-wrap gap-2">
+          <div className="p-4 bg-white min-h-44 relative rounded-lg shadow-lg transition-all duration-500 border border-purple-100">
+            <div className="flex flex-wrap transition-all duration-500 gap-2">
               {!gameOver &&
                 shuffledWords.map((word, index) => (
                   <div
@@ -197,7 +197,7 @@ const MemoryGame = () => {
             <div
               className={`${
                 currentStep === 1 ? " opacity-100" : " opacity-0"
-              } transition-all duration-1000 absolute left-0 -translate-x-6 -translate-y-4 top-0`}
+              } transition-all duration-1000 absolute left-0 -translate-x-6 -translate-y-5 top-0`}
             >
               <img
                 src="/up-arrow.svg"
