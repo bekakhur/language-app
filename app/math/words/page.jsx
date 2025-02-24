@@ -124,9 +124,9 @@ const MemoryGame = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br portrait:bg-gradient-to-br landscape:bg-gradient-to-br select-none from-purple-100 to-blue-100 sm:pt-12 p-8">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b portrait:bg-gradient-to-b landscape:bg-gradient-to-b select-none from-orange-200 to-orange-300 sm:pt-12 p-8">
       <div className="max-w-xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-purple-900 mb-8">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
           I Went To The Market And Bought
         </h1>
 
@@ -134,24 +134,38 @@ const MemoryGame = () => {
         <div
           className={
             !gameOver
-              ? "text-center text-2xl font-semibold text-purple-800 mb-6"
+              ? "text-center text-2xl font-semibold text-gray-800 mb-6"
               : "hidden"
           }
         >
-          Score: {currentStep + 1}
+          Score:{" "}
+          <span className="text-4xl font-bold ml-1">{currentStep + 1}</span>
         </div>
 
         {/* Сообщение о результате игры */}
         {message && (
           <div
-            className={`p-4 m-6 h-[200px] shadow-lg flex flex-col gap-4 text-white justify-center items-center rounded-lg text-center text-5xl font-semibold ${
+            className={`p-8 m-4 shadow-2xl flex flex-col gap-6 text-white justify-center items-center rounded-lg text-center text-5xl font-semibold ${
               gameOver && message.includes("Game")
-                ? "bg-red-500 text-gray-900"
+                ? "bg-gradient-to-t from-red-500 to-red-400 text-gray-900"
                 : "bg-green-100 text-green-800"
             }`}
           >
             <p>{message}</p>
-            <p className="text-2xl">Score: {currentStep + 1}</p>
+            <p className="text-2xl">
+              Score:{" "}
+              <span className="text-4xl font-bold ml-1">{currentStep + 1}</span>
+            </p>
+            {gameOver && (
+              <div className="flex justify-center">
+                <button
+                  onClick={startNewGame}
+                  className="px-6 py-2 text-xl bg-gradient-to-t from-green-600 to-green-400 text-white rounded-lg shadow-lg sm:hover:bg-green-600 transition-colors"
+                >
+                  Restart
+                </button>
+              </div>
+            )}
           </div>
         )}
 
@@ -163,7 +177,7 @@ const MemoryGame = () => {
               {droppedWords.map((word, index) => (
                 <div
                   key={index}
-                  className="p-2 w-auto bg-purple-50 text-purple-900 rounded-lg shadow-sm text-center"
+                  className="p-2 w-auto bg-orange-100 text-gray-900 rounded-lg shadow-md text-center"
                 >
                   {word}
                 </div>
@@ -179,7 +193,7 @@ const MemoryGame = () => {
                   <div
                     key={index}
                     onClick={() => handleWordClick(word)} // Обработчик клика
-                    className="p-2 w-auto bg-blue-50 text-blue-900 rounded-lg shadow-sm text-center cursor-pointer sm:hover:bg-blue-100 transition-colors"
+                    className="p-2 w-auto bg-blue-100 text-gray-900 rounded-lg shadow-md text-center cursor-pointer sm:hover:bg-blue-100 active:bg-blue-100 transition-colors"
                   >
                     {word}
                   </div>
@@ -201,16 +215,6 @@ const MemoryGame = () => {
         </div>
 
         {/* Кнопка сброса игры */}
-        {gameOver && (
-          <div className="flex justify-center mt-10">
-            <button
-              onClick={startNewGame}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-colors"
-            >
-              Start Game
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );
