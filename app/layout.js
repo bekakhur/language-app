@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { Lato } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/next";
 
 const oswald = Lato({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
 
         <body className={`${oswald.className} bg-white antialiased text-black`}>
           {children}
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
