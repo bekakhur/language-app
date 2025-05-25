@@ -26,7 +26,9 @@ export default function RootLayout({ children }) {
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
 
-        <body className={`${oswald.className} bg-white antialiased text-black`}>
+        <body
+          className={`${oswald.className} bg-red-400 antialiased text-black`}
+        >
           {children}
           <Analytics />
         </body>

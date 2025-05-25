@@ -55,7 +55,7 @@ const page = () => {
             <h2 className="text-3xl font-semibold mb-8">Subscription Plans</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Monthly Plan Card */}
-              <div className="border rounded-xl p-8 hover:shadow-xl transition-all">
+              <div className="border rounded-xl p-8 hover:shadow-2xl shadow-xl transition-all">
                 <h3 className="text-2xl font-bold mb-4">Monthly Plan</h3>
                 <p className="text-green-700 text-lg font-semibold mb-6">
                   $9.99<span className="text-sm ">/month</span>
@@ -79,7 +79,7 @@ const page = () => {
               </div>
 
               {/* Yearly Plan Card */}
-              <div className="border rounded-xl p-8 hover:shadow-xl transition-all">
+              <div className="border rounded-xl p-8 hover:shadow-2xl shadow-xl transition-all">
                 <h3 className="text-2xl font-bold mb-4">Yearly Plan</h3>
                 <p className="text-green-700 text-lg font-semibold mb-6">
                   $99.99<span className="text-sm ">/year</span>
